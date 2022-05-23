@@ -1,0 +1,129 @@
+.Lbox {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+.LCardsDiv {
+  width: 100%;
+  display: flex;
+}
+.LCardsDiv ul {
+  display: flex;
+}
+.LCardsDiv ul li {
+  list-style: none;
+  margin-left: 10px;
+}
+.LDispCard {
+  width: 30vh;
+  height: auto;
+  background-color: white;
+  border: 1px solid rgb(230, 228, 228);
+  border-radius: 10px;
+  padding: 5px;
+}
+.LDispCard center font {
+  color: gray;
+  font-size: 13px;
+}
+.LDispCard:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.perHead {
+  font-size: 15px;
+  color: gray;
+  margin-right: 20px;
+  margin-top: 7px;
+}
+.LLhead {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  background-color: white;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+}
+.btnSearch {
+  background-color: white;
+  color: green;
+  border: none;
+  border-radius: 7%;
+  outline: 1px solid green;
+  margin-left: 10px;
+}
+.btnSearch:hover {
+  background-color: green;
+  color: white;
+  transform: scale(1.1);
+}
+.subCounty {
+  width: 70%;
+  height: 26px;
+  padding-left: 10px;
+  border: 1px solid aliceblue;
+  border-radius: 5px;
+}
+.subCounty:hover {
+  border-style: groove;
+  border: 1px solid rgb(26, 160, 82);
+}
+.table {
+  width: 100%;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.table thead tr {
+  background-color: rgb(44, 46, 49);
+  color: white;
+  border: 1px solid gray;
+}
+.table thead tr th {
+  text-align: start;
+  padding-left: 3px;
+  font-weight: 10;
+  font-size: 13px;
+}
+.tr {
+  border-collapse: collapse;
+}
+.table tbody tr td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+#tr:hover {
+  background-color: aliceblue;
+  color: green;
+}
+
+@media only screen and (max-width: 650px) {
+  .LCardsDiv ul {
+    display: flex;
+    overflow: scroll;
+  }
+  .LCardsDiv ul {
+    padding: 0px;
+  }
+  .LCardsDiv ul li {
+    list-style: none;
+    margin-left: 10px;
+  }
+  .LDispCard {
+    width: auto;
+    padding: 10px 20px;
+  }
+  .subCounty {
+    width: 70%;
+    height: auto;
+  }
+  .perHead {
+    font-size: 15px;
+    color: gray;
+    margin-right: 4px;
+  }
+}
