@@ -1,7 +1,20 @@
+
 .Lbox {
   width: 100%;
   height: auto;
   margin-top: 10px;
+}
+
+.landface{
+  position: absolute;
+  top: 40%;
+}
+.landface h1{
+  color: rgb(44, 46, 49);
+}
+.landface p{
+  width: 80%;
+  color: rgb(44, 46, 49);
 }
 .LCardsDiv {
   width: 100%;
@@ -99,6 +112,41 @@
 #tr:hover {
   background-color: aliceblue;
   color: green;
+}
+.btnViewTable{
+  width: 120px;
+  padding: 10px;
+  background-color: rgb(44, 46, 49);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  
+}
+.btnGetStarted{
+  width: 120px;
+  padding: 10px;
+  background-color: white;
+  outline: 1px solid rgb(44, 46, 49);
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.landingBox{
+  width:100%;
+  height: 90vh;
+  margin-bottom: 20px;
+  margin-top: -25px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.landingnews{
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
+}
+.newsBodyCover{
+  padding: 10px;
 }
 
 @media only screen and (max-width: 650px) {

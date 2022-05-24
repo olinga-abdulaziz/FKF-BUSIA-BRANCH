@@ -8,7 +8,7 @@ import Players from './Pages/Players'
 import Fixtures from './Pages/Fixture';
 import Playerdetail from './Pages/Playerdetail';
 import Results from './Pages/Results';
-
+import Table from './Pages/Table';
 
 
 function App() {
@@ -36,6 +36,7 @@ function App() {
               <Route exact path='/' element={<Landing />}/>
               <Route exact path='/clubs' element={<Clubs />}/>
               <Route exact path='/players' element={<Players />}/>
+              <Route exact path='/table' element={<Table />}/>
               <Route exact path='/club-detail' element={<ClubDetail />}/>
               <Route exact path='/fixtures' element={<Fixtures />}/>
               <Route exact path='/player-detail' element={<Playerdetail />}/>
