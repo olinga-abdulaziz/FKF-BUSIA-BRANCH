@@ -1,0 +1,96 @@
+.resultBody{
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+.resultItem{
+    background-color: white;
+    border-radius: 20px;
+    outline: solid 1px rgb(44, 46, 49);
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
+.art1{
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+.art2{
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+.artImgDiv{
+    width: 20vh;
+    height: 10vh;
+}
+.clbName{
+    font-size: 20px;
+    color: rgb(44, 46, 49);
+}
+.goals{
+    font-size: 20px;
+    color: rgb(44, 46, 49);
+}
+.clbNDiv{
+    width: 20vh;
+}
+.dateTimeRes{
+    width: 100%;
+    background-color: rgb(44, 46, 49);
+    height: auto;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+}
+@media only  screen and (max-width:650px){
+    .resultBody{
+        width: 98%;
+    }
+    .resultItem{
+        width: 95%;
+        height: auto;
+        display: block;
+    }
+    .art1{
+        width: 100%;
+        outline: solid 1px rgb(44, 46, 49);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .art2{
+        width: 100%;
+        padding-left: 0px;
+    }
+    .artImgDiv{
+        width: 100px;
+        height: 50px;
+    }
+    .clbName{
+        font-size: 20px;
+        color: rgb(44, 46, 49);
+    }
+    .goals{
+        font-size: 20px;
+        color: rgb(44, 46, 49);
+    }
+    .clbNDiv{
+        width: 20vh;
+        margin-left: -10vh;
+    }
+}

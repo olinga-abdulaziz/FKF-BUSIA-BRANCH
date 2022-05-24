@@ -1,108 +1,153 @@
 import playercss from './Css/Players.css'
 import { Link } from 'react-router-dom'
+import fkflogo from '../Images/fkflogo.png'
+
 
 function Players() {
     const data=[
         {
             "pos":"1",
+            "firstname":"Ali Osere",
+            "licence":"FKFTSN/2223195",
+            "club":"Kangelemge fc",
+        },
+        {
+            "pos":"2",
+            "firstname":"Erick okondo",
+            "licence":"FKFTSN/2223195",
+            "club":"Kocholia fc",
+        },
+        {
+            "pos":"3",
+            "firstname":"Zubeir Opaka",
+            "licence":"FKFTSN/2223195",
+            "club":"Akolong fc",
+        },
+        {
+            "pos":"4",
+            "firstname":"Mathew Osike",
+            "licence":"FKFTSN/2223195",
             "club":"Pool fc",
-            "p":"1",
-            "w":"3",
-            "d":"5",
-            "l":"2",
-            "f":"2",
-            "a":"2",
-            "+-":"1",
-            "pts":"1"
-        },
-        {
-            "pos":"2",
-            "club":"Kakurkit fc",
-            "p":"2",
-            "w":"3",
-            "d":"2",
-            "l":"2",
-            "f":"3",
-            "a":"2",
-            "+-":"1",
-            "pts":"1"
-        },
-        {
-            "pos":"2",
-            "club":"Kakurkit fc",
-            "p":"2",
-            "w":"3",
-            "d":"2",
-            "l":"2",
-            "f":"3",
-            "a":"2",
-            "+-":"1",
-            "pts":"1"
-        },
-        {
-            "pos":"2",
-            "club":"Kakurkit fc",
-            "p":"2",
-            "w":"3",
-            "d":"2",
-            "l":"2",
-            "f":"3",
-            "a":"2",
-            "+-":"1",
-            "pts":"1"
         },
     ]
     return(
         <div className='Lbox'>
-            <div className='LCardsDiv'>
 
-                <ul>
-                    <li>
-                        <div className='LDispCard'>
-                            <center>
-                            <font>2300</font> <br />
-                            <font>Clubs</font>
-                            </center>
-                        </div>
-                    </li>
-                    <li>
-                        <div className='LDispCard'>
-                            <center>
-                            <font>53000</font> <br />
-                            <font>Players</font>
-                            </center>
-                        </div>
-                    </li>
-                    <li>
-                        <div className='LDispCard'>
-                            <center>
-                            <font>700</font> <br />
-                            <font>Referies</font>
-                            </center>
-                        </div>
-                    </li>
-
-                    <li>      
-                        <div className='LDispCard'>
-                            <center>
-                            <font>930</font> <br />
-                            <font>LinesMen</font>
-                            </center>
-                        </div>
-                    </li>
-                </ul>
-            </div>
             <div className='LLhead'>
-                <h3>TESO NORTH SUB-COUNTY LEAGE TABLE</h3>
+                <strong>TESO NORTH SUB-COUNTY LEAGE PLAYERS</strong>
             </div>
+            <div className='playerStats'>
+                <div className='statsHead'>
+                    <strong className='statsTitle'>Top PLayers</strong>
+                </div>
 
+                <div className='statBody'>
+                    <article className='topPlayer'>
+                        <div className='tpTop'>
+                            <div className='tpImgDiv'>
+                                <img src={fkflogo} width='100%' height='100%' />
+                            </div>
+                            <div className='tpProfile'>
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>NAME :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>Ali Osere</label> <br />
+                                
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>POSITION :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>AM</label> <br />
+
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>LICENCE NO :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>FKFTNS/2232567</label> <br />
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>DATE OF BIRTH :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>12/3/2000</label> <br />
+                            </div>
+                        </div>
+                        <div className='tpBot'>
+                                <label style={{fontSize:'11px'}}><strong>CLUB :</strong></label> <br />
+                                <label style={{fontSize:'13px',color:'gray'}}>Malaba Pool Fc</label> <br />
+                        </div>
+                    </article>
+
+                    <article className='topPlayer'>
+                        <div className='tpTop'>
+                            <div className='tpImgDiv'>
+                                <img src={fkflogo} width='100%' height='100%' />
+                            </div>
+                            <div className='tpProfile'>
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>NAME :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>Ali Osere</label> <br />
+                                
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>POSITION :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>AM</label> <br />
+
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>LICENCE NO :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>FKFTNS/2232567</label> <br />
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>DATE OF BIRTH :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>12/3/2000</label> <br />
+                            </div>
+                        </div>
+                        <div className='tpBot'>
+                                <label style={{fontSize:'11px'}}><strong>CLUB :</strong></label> <br />
+                                <label style={{fontSize:'13px',color:'gray'}}>Malaba Pool Fc</label> <br />
+                        </div>
+                    </article>
+
+                    <article className='topPlayer'>
+                        <div className='tpTop'>
+                            <div className='tpImgDiv'>
+                                <img src={fkflogo} width='100%' height='100%' />
+                            </div>
+                            <div className='tpProfile'>
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>NAME :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>Ali Osere</label> <br />
+                                
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>POSITION :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>AM</label> <br />
+
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>LICENCE NO :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>FKFTNS/2232567</label> <br />
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>DATE OF BIRTH :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>12/3/2000</label> <br />
+                            </div>
+                        </div>
+                        <div className='tpBot'>
+                                <label style={{fontSize:'11px'}}><strong>CLUB :</strong></label> <br />
+                                <label style={{fontSize:'13px',color:'gray'}}>Malaba Pool Fc</label> <br />
+                        </div>
+                    </article>
+                    
+                    <article className='topPlayer'>
+                        <div className='tpTop'>
+                            <div className='tpImgDiv'>
+                                <img src={fkflogo} width='100%' height='100%' />
+                            </div>
+                            <div className='tpProfile'>
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>NAME :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>Ali Osere</label> <br />
+                                
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>POSITION :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>AM</label> <br />
+
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>LICENCE NO :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>FKFTNS/2232567</label> <br />
+                                <label style={{fontSize:'11px',color:'gray'}}><strong>DATE OF BIRTH :</strong></label> <br />
+                                <label style={{fontSize:'13px'}}>12/3/2000</label> <br />
+                            </div>
+                        </div>
+                        <div className='tpBot'>
+                                <label style={{fontSize:'11px'}}><strong>CLUB :</strong></label> <br />
+                                <label style={{fontSize:'13px',color:'gray'}}>Malaba Pool Fc</label> <br />
+                        </div>
+                    </article>
+                </div>
+            </div>
             <div className='LLBody'>
+                <div className='searchDiv'>
+                    <input type='search' className='inputSe' placeholder='search player ...'/><button className='btnSearchPL'>Search</button>
+                </div>
                     <table className='table'>
                         <thead>
                             <tr className='tr'>
                                 <th>POS.</th>
                                 <th>First Name</th>
-                                <th>Last Name</th>
                                 <th>Licence No.</th>
                                 <th>Club</th>
                                 <th>VIEW</th>
@@ -113,10 +158,9 @@ function Players() {
                                 return(
                                     <tr className='tr' id='tr'>
                                         <td>{item.pos}</td>
+                                        <td>{item.firstname}</td>
+                                        <td>{item.licence}</td>
                                         <td>{item.club}</td>
-                                        <td>{item.p}</td>
-                                        <td>{item.w}</td>
-                                        <td>{item.d}</td>
                                         <td>
                                             <Link to='/player-detail' className='btn btn-success btn-sm'  style={{width:'100%'}}>View</Link>
                                         </td>
