@@ -92,7 +92,7 @@ function Results() {
                                 <img src={fkflogo} width={'100%'} height='100%' />
                             </div>
                             <div className='clbNDiv'>
-                                <font className='clbName'>BlackStarts Fc</font>
+                                <font className='clbName'>Black stars Fc</font>
                             </div>
                             <strong className='goals'>1</strong>
                         </div>
