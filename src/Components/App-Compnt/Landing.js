@@ -33,6 +33,8 @@ function Landing() {
                         </div>
                     </div>
             </div>
+            <a href="https://kol.jumia.com/api/click/link/d884787d-e6bd-4979-8f7e-7cd224451b46/28699ebb-f71e-4fe2-9d1e-f6219269490c"><img src="https://kol.jumia.com/banners/wXWKZaTleGlzWJsAMJ9v4H4AuafZqIpgRcIwoNwJ.png" alt="DRINKS FEST 23rd May - 29th May"/></a>
+
         </div>
         </div>
     )

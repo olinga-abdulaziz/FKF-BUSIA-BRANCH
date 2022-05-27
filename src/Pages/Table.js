@@ -216,7 +216,7 @@ function Table() {
             <div className='LLhead'>
                 <strong>TESO NORTH SUB-COUNTY LEAGE 2022/2023 TABLE</strong>
             </div>
-
+            <a href="https://kol.jumia.com/api/click/link/d884787d-e6bd-4979-8f7e-7cd224451b46/371d0b23-9cb9-42d7-bc36-a61d5bc8a897"><img src="https://kol.jumia.com/banners/C6KpCgTrmKtLAsoXkAdsgj7z6T3axKpJT2BDfia0.png" alt="Baby products"/></a>
             <div className='LLBody'>
                     <table className='table'>
                         <thead>
@@ -258,6 +258,7 @@ function Table() {
                         </tbody>
                     </table>
             </div>
+            
         </div>
     )
 }
