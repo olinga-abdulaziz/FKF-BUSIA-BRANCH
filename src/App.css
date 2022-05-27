@@ -87,6 +87,7 @@
 }
 .alinks{
   color: white;
+  list-style: none;
 }
 .copywriteDiv{
   width: 100%;
