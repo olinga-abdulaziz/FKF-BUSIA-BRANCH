@@ -92,7 +92,6 @@
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  display: none;
 }
 .table thead tr {
   background-color: rgb(44, 46, 49);
@@ -154,6 +153,41 @@
 }
 
 @media only screen and (max-width: 650px) {
+  .LLBody{
+    width: 95%;
+    height: 100vh;
+  }
+  .table {
+    width: auto;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .table thead tr {
+    background-color: rgb(44, 46, 49);
+    color: white;
+    border: 1px solid gray;
+  }
+  .table thead tr th {
+    text-align: start;
+    padding-left: 3px;
+    font-weight: 10;
+    font-size: 13px;
+  }
+  .tr {
+    border-collapse: collapse;
+  }
+  .table tbody tr td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  #tr:hover {
+    background-color: aliceblue;
+    color: green;
+  }
   .LCardsDiv ul {
     display: flex;
     overflow: scroll;
