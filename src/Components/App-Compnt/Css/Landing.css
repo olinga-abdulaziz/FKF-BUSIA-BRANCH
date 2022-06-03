@@ -1,9 +1,6 @@
 
 .Lbox {
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-
+ 
 }
 
 .landface{
@@ -61,7 +58,6 @@
   text-align: center;
 }
 .LLBody{
-  background-color: red;
   width: 100%;
   height: auto;
 }
@@ -90,10 +86,12 @@
   border: 1px solid rgb(26, 160, 82);
 }
 .table {
-  width: 100%;
+  width: 95%;
   background-color: white;
   margin-top: 10px;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .table thead tr {
   background-color: rgb(44, 46, 49);

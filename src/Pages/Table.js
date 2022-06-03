@@ -216,10 +216,10 @@ function Table() {
     ]
     return(
         <div className='Lbox'>
-
-            <div className='LLhead'>
-                <strong>TESO NORTH SUB-COUNTY LEAGE 2022/2023</strong>
-            </div>
+            <br />
+                <center>
+                <small>TESO NORTH SUB-COUNTY LEAGE 2022/2023</small>
+                </center>
             <div className='LLBody'>
                     <table className='table'>
                         <thead>
@@ -261,7 +261,6 @@ function Table() {
                         </tbody>
                     </table>
             </div>
-            <script src={backend} />
         </div>
     )
 }
