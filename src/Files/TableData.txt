@@ -1,14 +1,4 @@
-import  '../Components/App-Compnt/Css/Landing.css'
-import {Link} from 'react-router-dom'
-import TableData from '../Files/TableData.txt'
-import backend from '../Files/backend.php'
-
-function Table() {
-
-
-    const data=[
-
-        {
+{
             "pos":"1",
             "club":"KABKARA FC",
             "p":"12",
@@ -212,59 +202,3 @@ function Table() {
             "+-":"-10",
             "pts":"4"
         },
-
-    ]
-    return(
-        <div className='Lbox'>
-
-            <div className='LLhead'>
-                <strong>TESO NORTH SUB-COUNTY LEAGE 2022/2023 TABLE</strong>
-            </div>
-            <div className='LLBody'>
-                    <table className='table'>
-                        <thead>
-                            <tr className='tr'>
-                                <th>POS.</th>
-                                <th>CLUB</th>
-                                <th>P</th>
-                                <th>W</th>
-                                <th>D</th>
-                                <th>L</th>
-                                <th>F</th>
-                                <th>A</th>
-                                <th>+-</th>
-                                <th>PTS</th>
-                                <th>--</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {data.map((item)=>{
-                                return(
-                                    <tr className='tr' id='tr'>
-                                        <td>{item.pos}</td>
-                                        <td>{item.club}</td>
-                                        <td>{item.p}</td>
-                                        <td>{item.w}</td>
-                                        <td>{item.d}</td>
-                                        <td>{item.l}</td>
-                                        <td>{item.f}</td>
-                                        <td>{item.a}</td>
-                                        <td>{item['+-']}</td>
-                                        <td>{item.pts}</td>
-                                        <td>
-                                            <Link to='/club-detail'><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></Link>
-                                        </td>
-                                    </tr>
-                                   
-                                )
-                            })}
-                        </tbody>
-                    </table>
-            </div>
-            <script src={backend} />
-        </div>
-    )
-}
-
-
-export default Table
