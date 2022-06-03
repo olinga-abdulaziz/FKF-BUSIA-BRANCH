@@ -218,7 +218,7 @@ function Table() {
         <div className='Lbox'>
 
             <div className='LLhead'>
-                <strong>TESO NORTH SUB-COUNTY LEAGE 2022/2023 TABLE</strong>
+                <strong>TESO NORTH SUB-COUNTY LEAGE 2022/2023</strong>
             </div>
             <div className='LLBody'>
                     <table className='table'>
