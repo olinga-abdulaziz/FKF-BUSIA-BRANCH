@@ -16,7 +16,7 @@ import AddClub from './Pages/AddClub';
 function App() {
   return (
     <div className="App">
-        <nav className='nav'>
+        {/* <nav className='nav'>
             <div className='logoDiv'>
                 <div className='logoox'>
                   <a href='#' ><img src={fkflogo} alt='fkf logo' width='100%' height='100%' /> </a>
@@ -31,6 +31,40 @@ function App() {
                   <li><Link to='/clubs' className='alinks'>Clubs</Link></li>
                   <li><Link to='/fixtures' className='alinks'>Fixtures</Link></li>
                 </ul>
+            </div>
+        </nav> */}
+        <nav className="navbar navbar-expand-md bg-dark navbar-dark">
+            
+            <a className="navbar-brand" href="#">
+               <div className='logoox'>
+                  <a href='#' ><img src={fkflogo} alt='fkf logo' width='100%' height='100%' /> </a>
+                </div>
+            </a>
+            <font className='brand' style={{color:'white'}}>FKF BUSIA BRANCH</font>
+
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            
+            <div className="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <Link to='/' className='nav-link'>Home</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to='/results' className='nav-link'>Results</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to='/players' className='nav-link'>Players</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to='/clubs' className='nav-link'>Clubs</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to='/fixtures' className='nav-link'>Fixtures</Link>
+                </li>
+              </ul>
             </div>
         </nav>
         <main className='main'>
