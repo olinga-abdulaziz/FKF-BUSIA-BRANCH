@@ -154,15 +154,14 @@
 
 @media only screen and (max-width: 650px) {
   .LLBody{
-    width: 95%;
+    width: 100%;
     height: auto;
   }
   .table {
-    width: 40%;
+    width: auto;
     background-color: white;
     margin-top: 10px;
     margin-bottom: 30px;
-    margin-right: 30px;
   }
   .table thead tr {
     background-color: rgb(44, 46, 49);
@@ -210,5 +209,8 @@
     font-size: 15px;
     color: gray;
     margin-right: 4px;
+  }
+  .Lbox {
+    padding-top: 30px;
   }
 }

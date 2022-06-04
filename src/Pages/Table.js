@@ -236,11 +236,46 @@ function Table() {
     ]
     return(
         <div className='Lbox'>
-            <br />
-                <small>TESO NORTH SUB-COUNTY LEAGE 2022/2023</small>
-                
+         
             <div className='LLBody'>
-                    <table className='table'>
+                <div className='container'>
+                    <h4>TESO NORTH SUB-COUNTY LEAGE 2022/2023</h4>
+                    <p>The table-hover class enables a hover state (grey background on mouse over) on table rows:</p>            
+                </div>
+
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>POS</th>
+                        <th>CLUB</th>
+                        <th>P</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                        <th>F</th>
+                        <th>GD</th>
+                        <th>PTS</th>
+                    </tr>
+                    </thead>
+                        <tbody>
+                        {data.map((item)=>{
+                                return(
+                                <tr>
+                                    <td>1</td>
+                                    <td>KNG</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>5</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>33</td>
+                                    <td>55</td>
+                                </tr>
+                                   )
+                                })}
+                        </tbody>
+                </table>
+                    {/* <table className='table'>
                         <thead>
                             <tr className='tr'>
                                 <th>POS.</th>
@@ -276,7 +311,7 @@ function Table() {
                                 )
                             })}
                         </tbody>
-                    </table>
+                    </table> */}
             </div>
         </div>
     )
