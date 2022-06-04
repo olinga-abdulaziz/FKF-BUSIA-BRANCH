@@ -9,6 +9,8 @@ import Fixtures from './Pages/Fixture';
 import Playerdetail from './Pages/Playerdetail';
 import Results from './Pages/Results';
 import Table from './Pages/Table';
+import EditTable from './Pages/EditTable';
+import AddClub from './Pages/AddClub';
 
 
 function App() {
@@ -41,6 +43,8 @@ function App() {
               <Route exact path='/fixtures' element={<Fixtures />}/>
               <Route exact path='/player-detail' element={<Playerdetail />}/>
               <Route exact path='/results' element={<Results />}/>
+              <Route exact path='/edit-table' element={<EditTable />}/>
+              <Route exact path='/add-club' element={<AddClub />}/>
           </Routes>
         </main>
         <footer className='footer'>

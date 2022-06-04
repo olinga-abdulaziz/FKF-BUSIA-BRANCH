@@ -1,10 +1,30 @@
 import  '../Components/App-Compnt/Css/Landing.css'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import TableData from '../Files/TableData.txt'
 import backend from '../Files/backend.php'
+import Button from '@mui/material/Button';
 
 function Table() {
 
+    const navigate=useNavigate()
+
+    const toEditTable=(pos,club,p,w,d,l,f,a,plm,pts)=>{
+        navigate('/edit-table',{state:
+            {
+                pos:pos,
+                club:club,
+                p:p,
+                w:w,
+                d:d,
+                l:l,
+                f:f,
+                a:a,
+                plm:plm,
+                pts:pts                                            
+        
+        }});
+          }
+        
 
     const data=[
 
@@ -217,9 +237,8 @@ function Table() {
     return(
         <div className='Lbox'>
             <br />
-                <center>
                 <small>TESO NORTH SUB-COUNTY LEAGE 2022/2023</small>
-                </center>
+                
             <div className='LLBody'>
                     <table className='table'>
                         <thead>
@@ -234,7 +253,7 @@ function Table() {
                                 <th>A</th>
                                 <th>+-</th>
                                 <th>PTS</th>
-                                <th>--</th>
+                                <th>Edit</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -250,11 +269,9 @@ function Table() {
                                         <td>{item.f}</td>
                                         <td>{item.a}</td>
                                         <td>{item['+-']}</td>
-                                        <td>{item.pts}</td>
-                                        <td>
-                                            <Link to='/club-detail'><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></Link>
-                                        </td>
-                                    </tr>
+                                        <td>{item.pts}</td> 
+                                        <td><i class="fas fa-edit" onClick={()=>toEditTable(item.pos,item.club,item.p,item.w,item.d,item.l,item.f,item.a,item['+-'],item.pts)}></i></td> 
+                                    </tr>     
                                    
                                 )
                             })}

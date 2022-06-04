@@ -73,13 +73,13 @@ function Results() {
                             <strong className='goals'>3</strong>
                         </div>
                         <div className='art2'>
-                        <div className='artImgDiv'>
-                                <img src={fkflogo} width={'100%'} height='100%' />
-                        </div>
-                            <div className='clbNDiv'>
-                                <font className='clbName'>Kabkara Fc</font>
+                            <div className='artImgDiv'>
+                                    <img src={fkflogo} width={'100%'} height='100%' />
                             </div>
-                            <strong className='goals'>2</strong>
+                                <div className='clbNDiv'>
+                                    <font className='clbName'>Kabkara Fc</font>
+                                </div>
+                                <strong className='goals'>2</strong>
                         </div>
                     </article>
                     <section className='dateTimeRes'>

@@ -1,7 +1,7 @@
 .resultBody{
     width: 80%;
     height: auto;
-    margin-left: auto;
+    margin-left: 20px;
     margin-right: auto;
     padding-top: 20px;
 }
@@ -67,11 +67,9 @@
         height: auto;
         display: block;
     }
-    .art1{
-        width: 100%;
-        outline: solid 1px rgb(44, 46, 49);
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+    .art1{   
+        width: 43vh;
+        padding-left: 0px;
     }
     .art2{
         width: 100%;
