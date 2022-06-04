@@ -40,7 +40,7 @@ function App() {
                   <a href='#' ><img src={fkflogo} alt='fkf logo' width='100%' height='100%' /> </a>
                 </div>
             </a>
-            <font className='brand' style={{color:'white'}}>FKF BUSIA BRANCH</font>
+            <font  style={{color:'white'}}>FKF BUSIA BRANCH</font>
 
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span className="navbar-toggler-icon"></span>

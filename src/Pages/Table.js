@@ -236,9 +236,9 @@ function Table() {
     ]
     return(
         <div className='Lbox'>
-         
             <div className='LLBody'>
                 <div className='container'>
+                    <br />
                     <h4>TESO NORTH SUB-COUNTY LEAGE 2022/2023</h4>
                     <p>The table-hover class enables a hover state (grey background on mouse over) on table rows:</p>            
                 </div>
@@ -275,43 +275,6 @@ function Table() {
                                 })}
                         </tbody>
                 </table>
-                    {/* <table className='table'>
-                        <thead>
-                            <tr className='tr'>
-                                <th>POS.</th>
-                                <th>CLUB</th>
-                                <th>P</th>
-                                <th>W</th>
-                                <th>D</th>
-                                <th>L</th>
-                                <th>F</th>
-                                <th>A</th>
-                                <th>+-</th>
-                                <th>PTS</th>
-                                <th>Edit</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {data.map((item)=>{
-                                return(
-                                    <tr className='tr' id='tr'>
-                                        <td>{item.pos}</td>
-                                        <td>{item.club}</td>
-                                        <td>{item.p}</td>
-                                        <td>{item.w}</td>
-                                        <td>{item.d}</td>
-                                        <td>{item.l}</td>
-                                        <td>{item.f}</td>
-                                        <td>{item.a}</td>
-                                        <td>{item['+-']}</td>
-                                        <td>{item.pts}</td> 
-                                        <td><i class="fas fa-edit" onClick={()=>toEditTable(item.pos,item.club,item.p,item.w,item.d,item.l,item.f,item.a,item['+-'],item.pts)}></i></td> 
-                                    </tr>     
-                                   
-                                )
-                            })}
-                        </tbody>
-                    </table> */}
             </div>
         </div>
     )
