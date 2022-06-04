@@ -182,6 +182,9 @@
     border-collapse: collapse;
     font-size: 13px;
   }
+  .adsbox{
+    width: 100%;
+  }
   #tr:hover {
     background-color: aliceblue;
     color: green;
