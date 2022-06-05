@@ -12,10 +12,20 @@ import Table from './Pages/Table';
 import EditTable from './Pages/EditTable';
 import AddClub from './Pages/AddClub';
 import ManageFixture from './Pages/ManageFixture';
-
+import Maintanance from './Maintanance';
+import { useState } from 'react';
 
 function App() {
+    const [isMaintanance, setisMaintanance] = useState(false);
   return (
+    <div>
+      {isMaintanance ? <Maintanance />:<AppBox />}
+    </div>
+  );
+}
+
+function AppBox() {
+  return(
     <div className="App">
         <nav className="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
             <Link to='/'>
@@ -112,7 +122,7 @@ function App() {
             <center><small>copywrited <span>&copy;</span> 2022</small></center>
         </div>
     </div>
-  );
+  )
 }
 
 export default App;
