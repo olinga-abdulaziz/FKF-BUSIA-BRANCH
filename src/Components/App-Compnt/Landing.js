@@ -35,6 +35,15 @@ function Landing() {
                             </div>
                             </div>
 
+                            
+                            <center className='landface'>
+                            <h2>Teso north fooltball federation</h2>
+                            <p>forwad always and backward never is our slogan,Teso north legends football club. we are the champions.forwad always and backward never is our slogan,Teso north legends football club. we are the champions.forwad always and backward never is our slogan</p>
+                                <div>
+                                <Link to='/table'><button className='btnViewTable'>View Table</button></Link>   
+                                    <a href='#landingnews'><button className='btnGetStarted'>Get Started</button></a>
+                                </div>
+                            </center>
 
                             <a className="carousel-control-prev" href="#demo" data-slide="prev">
                             <span className="carousel-control-prev-icon"></span>
@@ -45,14 +54,6 @@ function Landing() {
 
                         </div>
 
-                    <center className='landface'>
-                    <h2>Teso north fooltball federation</h2>
-                    <p>forwad always and backward never is our slogan,Teso north legends football club. we are the champions.forwad always and backward never is our slogan,Teso north legends football club. we are the champions.forwad always and backward never is our slogan</p>
-                        <div>
-                        <Link to='/table'><button className='btnViewTable'>View Table</button></Link>   
-                            <a href='#landingnews'><button className='btnGetStarted'>Get Started</button></a>
-                        </div>
-                    </center>
 
                 <div className='newsBodyCover'>
                     <div className='playerStats'>

@@ -50,19 +50,19 @@ function App() {
             <div className="collapse navbar-collapse" id="collapsibleNavbar">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link to='/' className='nav-link'>Home</Link>
+                  <Link to='/' data-toggle="collapse" data-target="#collapsibleNavbar"  className='nav-link'>Home</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to='/results' className='nav-link'>Results</Link>
+                  <Link to='/results' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'>Results</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to='/players' className='nav-link'>Players</Link>
+                  <Link to='/players' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'>Players</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to='/clubs' className='nav-link'>Clubs</Link>
+                  <Link to='/clubs' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'>Clubs</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to='/fixtures' className='nav-link'>Fixtures</Link>
+                  <Link to='/fixtures' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'>Fixtures</Link>
                 </li>
               </ul>
             </div>

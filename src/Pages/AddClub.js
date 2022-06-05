@@ -5,6 +5,7 @@ import axios from 'axios'
 
 function AddClub() {
     const [clubname, setclubname] = useState("");
+    const [abriviation, setabriviation] = useState("");
     const [home, sethome] = useState("");
     const [stadium, setstadium] = useState("");
     const [description, setdescription] = useState("");
@@ -15,13 +16,16 @@ function AddClub() {
         setbtnsubmit("please wait ...")
         axios.post('https://busia-muslim-council.herokuapp.com/club/add',{
             clubname:clubname,
+            abriviation:abriviation,
             home:home,
             stadium:stadium,
             description:description
+
         }).then((req,res)=>{
             setmessage("Club Registerd Successfully")
             setmessageDisplay("block")
             setclubname("")
+            setabriviation("")
             setdescription("")
             setstadium("")
             sethome("")
@@ -44,6 +48,11 @@ function AddClub() {
                     <div class="form-group">
                       <label for="" className='text-muted'>Club Name</label>
                       <input value={clubname} type="text" class="form-control" name="clubname" id="clubname" aria-describedby="helpId"  onChange={(event=>setclubname(event.target.value))} />
+                    </div>
+                    <div class="form-group">
+                      <label for="" className='text-muted'>Abriviation</label> <br />
+                      <small className='text-muted'>At least three laters that will be visible on the table</small>
+                      <input value={abriviation} type="text" placeholder='eg . TNL' class="form-control" name="abriviation" id="abriviation" aria-describedby="helpId"  onChange={(event=>setabriviation(event.target.value))} />
                     </div>
                     <div class="form-group">
                       <label for="" className='text-muted'>Badge</label>
