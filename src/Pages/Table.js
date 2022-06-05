@@ -242,7 +242,7 @@ function Table() {
                     <h4>TESO NORTH SUB-COUNTY LEAGE 2022/2023</h4>
                     <p>The table-hover class enables a hover state (grey background on mouse over) on table rows:</p> 
                     <div className='adsbox'>
-                      <a href="https://kol.jumia.com/api/click/link/d884787d-e6bd-4979-8f7e-7cd224451b46/026234e5-b229-4881-be28-679a642f9da4"><img width='100%' src="https://kol.jumia.com/banners/AwI8xxxgXCOgvEKLeIYFaEd5UYr1T9uxiLnyWip4.png" alt="Computing Category"/></a>           
+                      <a href="https://kol.jumia.com/api/click/link/d884787d-e6bd-4979-8f7e-7cd224451b46/026234e5-b229-4881-be28-679a642f9da4"><img width='100%' height='100%' src="https://kol.jumia.com/banners/AwI8xxxgXCOgvEKLeIYFaEd5UYr1T9uxiLnyWip4.png" alt="Computing Category"/></a>           
                     </div>
                 </div>
 
@@ -280,9 +280,7 @@ function Table() {
                                 })}
                         </tbody>
                 </table>
-                <div className='adsbox'>
-                     <a href="https://kol.jumia.com/api/click/link/d884787d-e6bd-4979-8f7e-7cd224451b46/28699ebb-f71e-4fe2-9d1e-f6219269490c"><img width='100%' src="https://kol.jumia.com/banners/wXWKZaTleGlzWJsAMJ9v4H4AuafZqIpgRcIwoNwJ.png" alt="DRINKS FEST 23rd May - 29th May"/></a>           
-                </div>
+                
                 <br />
             </div>
         </div>
