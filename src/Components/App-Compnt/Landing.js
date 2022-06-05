@@ -41,7 +41,7 @@ function Landing() {
                             <p>forwad always and backward never is our slogan,Teso north legends football club. we are the champions.forwad always and backward never is our slogan,Teso north legends football club. we are the champions.forwad always and backward never is our slogan</p>
                                 <div>
                                 <Link to='/table'><button className='btnViewTable'>View Table</button></Link>   
-                                    <a href='#landingnews'><button className='btnGetStarted'>Get Started</button></a>
+                                <Link to='/results'><button className='btnGetStarted'>Get Started</button></Link> 
                                 </div>
                             </center>
 
@@ -55,36 +55,254 @@ function Landing() {
                         </div>
 
 
-                <div className='newsBodyCover'>
-                    <div className='playerStats'>
-                        <div className='statsHead'>
-                            <strong className='statsTitle'>FKF NOTICE</strong>
+            <div className='newsBodyCover'>
+
+                    {/* // upcoming fixtures */}
+
+
+                    <div className='upcomingDiv0'>
+                    <div className='upHeader'>
+                        <strong>Upcomming Matches</strong>
+                        <small>Week 13</small>
+                    </div>
+                    <div className='upbody'>
+                        <article className='upMatchItem'>
+                            <header>
+                                <strong>HOME</strong>
+                                <small>Sat. 12/May 1:10am </small>
+                                <strong>Away</strong>
+                            </header>
+                            <hr/>
+                            <footer>
+                                <div className='footfDiv1'>
+                                    <small>Sokopaka Fc</small>
+                                </div>
+                                <div className='footfDiv2'>
+                                   <center><strong>Vs</strong></center>
+                                   <div className='timeVenue'>
+                                        <center>
+                                        <small>Amoni pri.</small>
+                                        </center>
+                                   </div>
+                                </div>
+                                <div className='footfDiv3'>
+                                    <small>Kabkara Fc</small>
+                                </div>
+                            </footer>
+                        </article>
+
+                        <article className='upMatchItem'>
+                            <header>
+                                <strong>HOME</strong>
+                                <small>Sat. 12/May 1:10am </small>
+                                <strong>Away</strong>
+                            </header>
+                            <hr/>
+                            <footer>
+                                <div className='footfDiv1'>
+                                    <small>Kakurkit Bullets</small>
+                                </div>
+                                <div className='footfDiv2'>
+                                   <center><strong>Vs</strong></center>
+                                   <div className='timeVenue'>
+                                        <center>
+                                        <small>Kakurkit pri.</small>
+                                        </center>
+                                   </div>
+                                </div>
+                                <div className='footfDiv3'>
+                                    <small>Aboloi Fc</small>
+                                </div>
+                            </footer>
+                        </article>
+
+                        <article className='upMatchItem'>
+                            <header>
+                                <strong>HOME</strong>
+                                <small>Sun. 13/May 1:10am </small>
+                                <strong>Away</strong>
+                            </header>
+                            <hr/>
+                            <footer>
+                                <div className='footfDiv1'>
+                                    <small>Homeboys Fc</small>
+                                </div>
+                                <div className='footfDiv2'>
+                                   <center><strong>Vs</strong></center>
+                                   <div className='timeVenue'>
+                                        <center>
+                                        <small>Malaba Stadium.</small>
+                                        </center>
+                                   </div>
+                                </div>
+                                <div className='footfDiv3'>
+                                    <small>Koruruma Fc</small>
+                                </div>
+                            </footer>
+                        </article>
+
+
+                        <article className='upMatchItem'>
+                            <header>
+                                <strong>HOME</strong>
+                                <small>Sun. 13/May 1:10am </small>
+                                <strong>Away</strong>
+                            </header>
+                            <hr/>
+                            <footer>
+                                <div className='footfDiv1'>
+                                    <small>Korisai Fc</small>
+                                </div>
+                                <div className='footfDiv2'>
+                                   <center><strong>Vs</strong></center>
+                                   <div className='timeVenue'>
+                                        <center>
+                                        <small>Korisai pri.</small>
+                                        </center>
+                                   </div>
+                                </div>
+                                <div className='footfDiv3'>
+                                    <small>Kabkara Fc</small>
+                                </div>
+                            </footer>
+                        </article>
+
+
+                        <article className='upMatchItem'>
+                            <header>
+                                <strong>HOME</strong>
+                                <small>Sun. 13/May 1:10am </small>
+                                <strong>Away</strong>
+                            </header>
+                            <hr/>
+                            <footer>
+                                <div className='footfDiv1'>
+                                    <small>Pool Fc</small>
+                                </div>
+                                <div className='footfDiv2'>
+                                   <center><strong>Vs</strong></center>
+                                   <div className='timeVenue'>
+                                        <center>
+                                        <small>Malaba Stadium.</small>
+                                        </center>
+                                   </div>
+                                </div>
+                                <div className='footfDiv3'>
+                                    <small>Okuleu Fc</small>
+                                </div>
+                            </footer>
+                        </article>
+
+
+                        <article className='upMatchItem'>
+                            <header>
+                                <strong>HOME</strong>
+                                <small>Sun. 13/May 1:10am </small>
+                                <strong>Away</strong>
+                            </header>
+                            <hr/>
+                            <footer>
+                                <div className='footfDiv1'>
+                                    <small>Adanya Fc</small>
+                                </div>
+                                <div className='footfDiv2'>
+                                   <center><strong>Vs</strong></center>
+                                   <div className='timeVenue'>
+                                        <center>
+                                        <small>Adanya Pri.</small>
+                                        </center>
+                                   </div>
+                                </div>
+                                <div className='footfDiv3'>
+                                    <small>Akobwait Stars Fc</small>
+                                </div>
+                            </footer>
+                        </article>
+
+                        <article className='upMatchItem'>
+                            <header>
+                                <strong>HOME</strong>
+                                <small>Sun. 13/May 1:10am </small>
+                                <strong>Away</strong>
+                            </header>
+                            <hr/>
+                            <footer>
+                                <div className='footfDiv1'>
+                                    <small>Black Stars Fc</small>
+                                </div>
+                                <div className='footfDiv2'>
+                                   <center><strong>Vs</strong></center>
+                                   <div className='timeVenue'>
+                                        <center>
+                                        <small>Kamolo Pri.</small>
+                                        </center>
+                                   </div>
+                                </div>
+                                <div className='footfDiv3'>
+                                    <small>Kocholia Fc</small>
+                                </div>
+                            </footer>
+                        </article>
+
+                        <article className='upMatchItem'>
+                            <header>
+                                <strong>HOME</strong>
+                                <small>Sun. 13/May 1:10am </small>
+                                <strong>Away</strong>
+                            </header>
+                            <hr/>
+                            <footer>
+                                <div className='footfDiv1'>
+                                    <small>Kangelemge Fc</small>
+                                </div>
+                                <div className='footfDiv2'>
+                                   <center><strong>Vs</strong></center>
+                                   <div className='timeVenue'>
+                                        <center>
+                                        <small>Okuleu pri.</small>
+                                        </center>
+                                   </div>
+                                </div>
+                                <div className='footfDiv3'>
+                                    <small>Akolong Fc</small>
+                                </div>
+                            </footer>
+                        </article>
+
+
+                        
+                    </div>
+                </div>
+
+
+                    {/* // upcoming fixtures */}
+
+                    <div className='playerStats0'>
+                        <div className='statsHead0'>
+                            <strong className='statsTitle0'>FOOTBAL NEWS</strong>
                         </div>
 
                         <div className='statBody2'>
                         <strong>CAF WOMEN CHAMPIONS LEAGUE</strong> <br />
-                        Vihiga Queens crowned CAF Women Champions League CECAFA qualifiers champions
+                         <small className='text-muted'>Vihiga Queens crowned CAF Women Champions League CECAFA qualifiers champions</small>
                         </div>
 
                         <div className='statBody2'>
                         <strong>CAF WOMEN CHAMPIONS LEAGUE</strong> <br />
-                        Vihiga Queens, CBE FC to battle it out in CAF Women Champions League CECAFA Qualifiers
+                         <small className='text-muted'>Vihiga Queens crowned CAF Women Champions League CECAFA qualifiers champions</small>
                         </div>
 
                         <div className='statBody2'>
                         <strong>CAF WOMEN CHAMPIONS LEAGUE</strong> <br />
-                        Harambee Stars coach Engin Firat has named James Saruni and Abud Omar in the starting lineup for today’s 2022 FIFA World Cup Qualifier against Rwanda. [...] Read More
+                         <small className='text-muted'>Vihiga Queens crowned CAF Women Champions League CECAFA qualifiers champions</small>
                         </div>
 
                         <div className='statBody2'>
                         <strong>CAF WOMEN CHAMPIONS LEAGUE</strong> <br />
-                        Vihiga Queens crowned CAF Women Champions League CECAFA qualifiers champions
+                         <small className='text-muted'>Vihiga Queens crowned CAF Women Champions League CECAFA qualifiers champions</small>
                         </div>
 
-                        <div className='statBody2'>
-                        <strong>CAF WOMEN CHAMPIONS LEAGUE</strong> <br />
-                        Vihiga Queens crowned CAF Women Champions League CECAFA qualifiers champions
-                        </div>
+                        
 
                         
                 </div>

@@ -34,14 +34,14 @@ function App() {
             </div>
         </nav> */}
         <nav className="navbar navbar-expand-md bg-dark navbar-dark">
-            
-            <a className="navbar-brand" href="#">
-               <div className='logoox'>
-                  <a href='#' ><img src={fkflogo} alt='fkf logo' width='100%' height='100%' /> </a>
-                </div>
-            </a>
-            <font  style={{color:'white'}}>FKF BUSIA BRANCH</font>
-
+            <Link to='/'>
+                <a className="navbar-brand" href="#">
+                  <div className='logoox'>
+                      <a href='#' ><img src={fkflogo} alt='fkf logo' width='100%' height='100%' /> </a>
+                    </div>
+                </a>
+                <font  style={{color:'white'}}>FKF BUSIA BRANCH</font>
+            </Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span className="navbar-toggler-icon"></span>
             </button>

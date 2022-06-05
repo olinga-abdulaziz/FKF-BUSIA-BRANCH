@@ -149,21 +149,37 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.upcomingDiv0{
+  width: 100%;
+  height: 100%;
+  outline: 1px gray solid;
+  border-radius: 10px;
+}
 .landingnews{
   width: 100%;
   height: 100vh;
   padding-top: 10px;
 }
 .newsBodyCover{
+  display: flex;
   padding: 10px;
+}
+.statsHead0{
+  padding-left: 10px;
 }
 .statBody2{
   display: block;
-  background-color: white;
+  background-color: aliceblue;
   padding: 10px;
   border-bottom: 1px solid gray;
 }
+.statBody2 strong{
+  font-weight: 10;
+}
 @media only screen and (max-width: 650px) {
+  .statsHead0{
+   margin-top: 20px;
+  }
   .carousel{
     height: 50vh;
     width: 100%;
@@ -173,6 +189,7 @@
     width: 100%;
     height: 100vh;
     padding-top: 0px;
+    display: block;
   }
   .carousel-item{
     height: 50vh;
@@ -190,9 +207,7 @@
   color: rgb(44, 46, 49);
   display: none;
 }
-.playerStats{
-  background-color: yellow;
-}
+
   .LLBody{
     width: 100%;
     height: auto;
@@ -221,6 +236,10 @@
     border: 1px solid gray;
     border-collapse: collapse;
     font-size: 13px;
+  }
+  .statsTitle0{
+    color: gray;
+    font-weight: 10;
   }
   .carousel{
     height: 50vh;
@@ -259,5 +278,8 @@
   }
   .Lbox {
     padding-top: 0px;
+  }
+  .newsBodyCover{
+    display: block;
   }
 }
