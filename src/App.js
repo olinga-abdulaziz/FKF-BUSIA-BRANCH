@@ -11,29 +11,13 @@ import Results from './Pages/Results';
 import Table from './Pages/Table';
 import EditTable from './Pages/EditTable';
 import AddClub from './Pages/AddClub';
+import ManageFixture from './Pages/ManageFixture';
 
 
 function App() {
   return (
     <div className="App">
-        {/* <nav className='nav'>
-            <div className='logoDiv'>
-                <div className='logoox'>
-                  <a href='#' ><img src={fkflogo} alt='fkf logo' width='100%' height='100%' /> </a>
-                </div>
-                <font className='brand' style={{color:'white'}}>FKF</font><font className='brand' style={{color:'white'}}>  BUSIA</font><font style={{color:'white'}} className='brand'>BRANCH</font>
-            </div>
-            <div className='linkDiv'>
-                <ul>
-                  <li><Link to='/' className='alinks'>Home</Link></li>
-                  <li><Link to='/results' className='alinks'>Results</Link></li>
-                  <li><Link to='/players' className='alinks'>Players</Link></li>
-                  <li><Link to='/clubs' className='alinks'>Clubs</Link></li>
-                  <li><Link to='/fixtures' className='alinks'>Fixtures</Link></li>
-                </ul>
-            </div>
-        </nav> */}
-        <nav className="navbar navbar-expand-md bg-dark navbar-dark">
+        <nav className="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
             <Link to='/'>
                 <a className="navbar-brand" href="#">
                   <div className='logoox'>
@@ -49,11 +33,15 @@ function App() {
             
             <div className="collapse navbar-collapse" id="collapsibleNavbar">
               <ul className="navbar-nav">
-                <li className="nav-item">
+              <li className="nav-item">
                   <Link to='/' data-toggle="collapse" data-target="#collapsibleNavbar"  className='nav-link'>Home</Link>
-                </li>
+              </li>
+                
                 <li className="nav-item">
                   <Link to='/results' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'>Results</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to='/table' data-toggle="collapse" data-target="#collapsibleNavbar"  className='nav-link'>Table</Link>
                 </li>
                 <li className="nav-item">
                   <Link to='/players' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'>Players</Link>
@@ -79,6 +67,7 @@ function App() {
               <Route exact path='/results' element={<Results />}/>
               <Route exact path='/edit-table' element={<EditTable />}/>
               <Route exact path='/add-club' element={<AddClub />}/>
+              <Route exact path='/manage-fixture' element={<ManageFixture />}/>
           </Routes>
         </main>
         <footer className='footer'>

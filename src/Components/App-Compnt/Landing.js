@@ -24,26 +24,18 @@ function Landing() {
 
 
                             <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <img width='100%' height='100%' src={img1} alt="Los Angeles" />
-                            </div>
-                            <div className="carousel-item">
-                                <img width='100%' height='100%' src={img4} alt="Chicago" />
-                            </div>
-                            <div className="carousel-item">
-                                <img width='100%' height='100%' src={img3} alt="New York" />
-                            </div>
+                                <div className="carousel-item active">
+                                    <img width='100%' height='100%' src={img1} alt="Los Angeles" />
+                                </div>
+                                <div className="carousel-item">
+                                    <img width='100%' height='100%' src={img4} alt="Chicago" />
+                                </div>
+                                <div className="carousel-item">
+                                    <img width='100%' height='100%' src={img3} alt="New York" />
+                                </div>
                             </div>
 
-                            
-                            <center className='landface'>
-                            <h2>Teso north fooltball federation</h2>
-                            <p>forwad always and backward never is our slogan,Teso north legends football club. we are the champions.forwad always and backward never is our slogan,Teso north legends football club. we are the champions.forwad always and backward never is our slogan</p>
-                                <div>
-                                <Link to='/table'><button className='btnViewTable'>View Table</button></Link>   
-                                <Link to='/results'><button className='btnGetStarted'>Get Started</button></Link> 
-                                </div>
-                            </center>
+                           
 
                             <a className="carousel-control-prev" href="#demo" data-slide="prev">
                             <span className="carousel-control-prev-icon"></span>
@@ -301,10 +293,6 @@ function Landing() {
                         <strong>CAF WOMEN CHAMPIONS LEAGUE</strong> <br />
                          <small className='text-muted'>Vihiga Queens crowned CAF Women Champions League CECAFA qualifiers champions</small>
                         </div>
-
-                        
-
-                        
                 </div>
                 
             </div>

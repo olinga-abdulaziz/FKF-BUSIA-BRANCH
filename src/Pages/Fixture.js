@@ -1,601 +1,124 @@
 import '../Pages/Css/fixtures.css';
 import fkflogo from '../Images/fkflogo.png'
+import { Link } from 'react-router-dom';
 
 function Fixtures() {
     return (
-        <div className="container">
-            <section className='fixtContDiv'>
-                <div className='upcomingDiv'>
-                    <div className='upHeader'>
-                        <strong>Upcomming Matches</strong>
-                        <small>Week 13</small>
-                    </div>
-                    <div className='upbody'>
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sat. 12/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Sokopaka Fc</small>
+<div className="container">
+<section className='fixtContDiv'>           
+    <div className='fixturesDiv'>
+                        <div className='CLhead'>
+                            <br />
+                            <div class="jumbotron jumbotron-fluid">
+                                <div class="container">
+                                    <h4>FIXTURE 2022/2023</h4>
                                 </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Amoni pri.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Kabkara Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sat. 12/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Kakurkit Bullets</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Kakurkit pri.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Aboloi Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sun. 13/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Homeboys Fc</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Malaba Stadium.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Koruruma Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sun. 13/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Korisai Fc</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Korisai pri.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Kabkara Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sun. 13/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Pool Fc</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Malaba Stadium.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Okuleu Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sun. 13/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Adanya Fc</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Adanya Pri.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Akobwait Stars Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sun. 13/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Black Stars Fc</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Kamolo Pri.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Kocholia Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sun. 13/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Kangelemge Fc</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Okuleu pri.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Akolong Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-
-                        
-                    </div>
+                            </div>
+                        </div>
+        <Link to='manage-fixture' className='btn btn-info'>Manage Fixture</Link>
+    <article className='weekFixt'>           
+        <div style={{paddingLeft:'10px'}}><small className='text-muted'>Week 1</small></div>
+        <div id="accordion">
+            <div class="card cdfix">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                        <div className='cdLBox'>
+                            <font>Pool Fc</font>
+                            <font>Vs</font>
+                            <font>Kabkara Fc</font>
+                            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                        </div>
+                        <div style={{color:'green'}}>
+                            <small>Sunday 3/4/2022</small>
+                        </div>
+                    </a>
                 </div>
 
-                <div className='fixturesDiv'>
-                <small className='weekLa'>WEEK 1</small>
-                <table class="table">
-                            <thead class="thead-dark">
-                            <tr>
-                                <th>No.</th>
-                                <th>Date</th>
-                                <th>Time</th>
-                                <th>Home Team</th>
-                                <th>Visiting Team</th>
-                                <th>Venue</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-                        <small className='weekLa'>WEEK 2</small>
-                <table class="table">
-                            <thead class="thead-dark">
-                            <tr>
-                                <th>No.</th>
-                                <th>Date</th>
-                                <th>Time</th>
-                                <th>Home Team</th>
-                                <th>Visiting Team</th>
-                                <th>Venue</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'30px',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'30px',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'30px',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-                        <small className='weekLa'>WEEK 3</small>
-                <table class="table">
-                            <thead class="thead-dark">
-                            <tr>
-                                <th>No.</th>
-                                <th>Date</th>
-                                <th>Time</th>
-                                <th>Home Team</th>
-                                <th>Visiting Team</th>
-                                <th>Venue</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'auto',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'30px',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'30px',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'30px',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'30px',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'30px',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'30px',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                           
-
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <div style={{width:'30px',height:'30px'}}>
-                                        11/3/2022
-                                    </div>
-                                </td>
-                                <td>1:00pm</td>
-                                <td>Pool Fc</td>
-                                <td>Akuleu Fc</td>
-                                <td>Amoni Pri.</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                     <div className='expdetail'>
+                        <font>Venue </font>
+                        <font>Kabkara primary </font>
+                     </div>
+                     <div className='expdetail'>
+                        <font>Time </font>
+                        <font>13:00 pm </font>
+                     </div>
+                    </div>
                 </div>
-            </section>
+            </div>
+            <div class="card cdfix">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapse6">
+                        <div className='cdLBox'>
+                            <font>Pool Fc</font>
+                            <font>Vs</font>
+                            <font>Kabkara Fc</font>
+                            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                        </div>
+                        <div style={{color:'green'}}>
+                            <small>Sunday 3/4/2022</small>
+                        </div>
+                    </a>
+                </div>
+
+                <div id="collapse6" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                     <div className='expdetail'>
+                        <font>Venue </font>
+                        <font>Kabkara primary </font>
+                     </div>
+                     <div className='expdetail'>
+                        <font>Time </font>
+                        <font>13:00 pm </font>
+                     </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </article>
+
+    <article className='weekFixt'>           
+        <div style={{paddingLeft:'10px'}}><small className='text-muted'>Week 2</small></div>
+        <div id="accordion">
+            <div class="card cdfix" >
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                        <div className='cdLBox'>
+                            <font>Pool Fc</font>
+                            <font>Vs</font>
+                            <font>Kabkara Fc</font>
+                            <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                        </div>
+                        <div style={{color:'green'}}>
+                            <small>Sunday 3/4/2022</small>
+                        </div>
+                    </a>
+                </div>
+
+                <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                    <div className='expdetail'>
+                        <font>Venue </font>
+                        <font>Kabkara primary </font>
+                     </div>
+                     <div className='expdetail'>
+                        <font>Time </font>
+                        <font>13:00 pm </font>
+                     </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+        </div>
+    </article>
+                
+</div>
+</section>
         </div>
     )
 }

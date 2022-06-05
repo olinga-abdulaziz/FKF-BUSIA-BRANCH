@@ -1,6 +1,6 @@
 .fixtContDiv{
     width: 100%;
-    height: auto;
+    height: 100vh;
     display: flex;
 }
 .upcomingDiv{
@@ -96,9 +96,26 @@
     background-color: green;
     color: white;
 }
+
+.cdLBox{
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    color: gray;
+}
 @media only  screen and (max-width:650px){
     .fixtContDiv{
         display: block;
+    }
+    .cdfix{
+        margin-bottom: 10px;
+    }
+    .expdetail{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
     .upcomingDiv{
         width: 100%;

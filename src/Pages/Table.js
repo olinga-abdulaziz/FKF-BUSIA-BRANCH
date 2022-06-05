@@ -3,29 +3,12 @@ import {Link, useNavigate} from 'react-router-dom'
 import TableData from '../Files/TableData.txt'
 import backend from '../Files/backend.php'
 import Button from '@mui/material/Button';
+import axios from 'axios'
+import { useEffect } from 'react'
+import { useState } from 'react'
+import { Dots,Waves } from 'loading-animations-react';
 
 function Table() {
-
-    const navigate=useNavigate()
-
-    const toEditTable=(pos,club,p,w,d,l,f,a,plm,pts)=>{
-        navigate('/edit-table',{state:
-            {
-                pos:pos,
-                club:club,
-                p:p,
-                w:w,
-                d:d,
-                l:l,
-                f:f,
-                a:a,
-                plm:plm,
-                pts:pts                                            
-        
-        }});
-          }
-        
-
     const data=[
 
         {
@@ -234,57 +217,78 @@ function Table() {
         },
 
     ]
+
+    const [clubsData, setclubsData] = useState([]);
+    const [isLoading, setisLoading] = useState(true);
+    useEffect(()=>{
+        getClubs()
+    },[])
+
+    function getClubs() {
+        axios.get('https://busia-muslim-council.herokuapp.com/club/clubs').then((response)=>{
+            const clubsArray=response.data
+            setclubsData(clubsArray)
+            setisLoading(false)
+        })
+    }
     return(
         <div className='Lbox'>
             <div className='LLBody'>
-                <div className='container'>
-                    <br />
-                    <h4>TESO NORTH SUB-COUNTY LEAGE 2022/2023</h4>
-                    <p>The table-hover class enables a hover state (grey background on mouse over) on table rows:</p> 
-                    <div className='adsbox'>
-                      <a href="https://kol.jumia.com/api/click/link/d884787d-e6bd-4979-8f7e-7cd224451b46/026234e5-b229-4881-be28-679a642f9da4"><img width='100%' height='100%' src="https://kol.jumia.com/banners/AwI8xxxgXCOgvEKLeIYFaEd5UYr1T9uxiLnyWip4.png" alt="Computing Category"/></a>           
-                    </div>
-                </div>
-
                 <br />
-
-                <table class="table table-hover">
-                    <thead>
-                    <tr>
-                        <th>POS</th>
-                        <th>CLUB</th>
-                        <th>P</th>
-                        <th>W</th>
-                        <th>D</th>
-                        <th>L</th>
-                        <th>F</th>
-                        <th>GD</th>
-                        <th>PTS</th>
-                    </tr>
-                    </thead>
-                        <tbody>
-                        {data.map((item)=>{
-                                return(
-                                <tr>
-                                    <td>1</td>
-                                    <td>KNG</td>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>5</td>
-                                    <td>10</td>
-                                    <td>11</td>
-                                    <td>33</td>
-                                    <td>55</td>
-                                </tr>
-                                   )
-                                })}
-                        </tbody>
-                </table>
+                <div className='CLhead'>
+                        <div class="jumbotron jumbotron-fluid">
+                            <div class="container">
+                                <h4>TESO NORTH SUB-COUNTY LEAGE 2022/2023</h4>
+                                <p>The table-hover class enables a hover state (grey background on mouse over) on table rows:</p>
+                            </div>
+                        </div>
+                </div>
+   
+                <div class="containerClubT">
+                    {isLoading ? <div class="spinner-border text-dark spn1"></div> : <Table />}    
+                </div>
                 
                 <br />
             </div>
         </div>
     )
+
+    function Table() {
+        return(
+            <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>POS</th>
+                <th>CLUB</th>
+                <th>P</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>F</th>
+                <th>GD</th>
+                <th>PTS</th>
+            </tr>
+            </thead>
+                <tbody>
+                {clubsData.map((item)=>{
+                        return(
+                        <tr>
+                            <td>{clubsData.indexOf(item)+1}</td>
+                            <td>{item.abriviation}</td>
+                            <td>{item.p}</td>
+                            <td>{item.w}</td>
+                            <td>{item.d}</td>
+                            <td>{item.l}</td>
+                            <td>{item.f}</td>
+                            <td>{item.gd}</td>
+                            <td>{item.pts}</td>
+                        </tr>
+                           )
+                        })}
+                </tbody>
+        </table>
+        )
+    }
 }
 
 

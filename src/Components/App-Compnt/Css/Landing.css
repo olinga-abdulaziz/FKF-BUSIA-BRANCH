@@ -176,7 +176,12 @@
 .statBody2 strong{
   font-weight: 10;
 }
+
 @media only screen and (max-width: 650px) {
+  .jumbotron{
+    width: 90%;
+    margin-top: 40px;
+  }
   .statsHead0{
    margin-top: 20px;
   }

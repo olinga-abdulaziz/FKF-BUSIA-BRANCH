@@ -25,7 +25,12 @@ function Clubs() {
     return(
         <div className='CLBox'>
             <div className='CLhead'>
-                 <font className='perHead'><i class="fas fa-baseball-ball"></i><strong>TESO NORTH SUB-COUNTY LEAGE CLUBS</strong></font>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h4>Teso North Clubs</h4>
+                    <p>The table below consist of Teso north Clubs</p>
+                </div>
+            </div>
             </div>
             <div className='CLbody'>
                 <div className='clbsTopN'>
@@ -33,7 +38,7 @@ function Clubs() {
                     <Link to='/add-club' className='btn btn-secondary'><i class="fa fa-plus-circle" aria-hidden="true"></i> New Club</Link>                  
                 </div>
                 <div class="containerClubT">
-                    {isLoading ? <Dots text='Loading ...' className='loading'   /> : <TableContainer />}    
+                    {isLoading ? <div class="spinner-border text-dark spn1"></div> : <TableContainer />}    
                 </div>
             </div>
         </div>

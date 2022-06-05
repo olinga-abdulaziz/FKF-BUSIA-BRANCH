@@ -29,9 +29,18 @@ function AddClub() {
             setdescription("")
             setstadium("")
             sethome("")
+            setbtnsubmit("Submit")
         }).catch((err)=>{
             setmessage(err)
             console.log(err);
+            setmessageDisplay("block")
+            setclubname("")
+            setabriviation("")
+            setdescription("")
+            setstadium("")
+            sethome("")
+            setbtnsubmit("Submit")
+
         })
     }
 
@@ -39,10 +48,7 @@ function AddClub() {
         <div className='container contTT'>
             
             <form className='clubForm'>
-            <div class="alert alert-success alert-dismissible" style={{display:messageDisplay}}>
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <strong>Success!</strong> {message}
-            </div>
+            
                 <h4>Register New Club</h4>
                 <hr />
                     <div class="form-group">
@@ -73,6 +79,10 @@ function AddClub() {
                     </div>
                     <input name="" id="" class="btn btn-primary form-control" type="button" value={btnsubmit} onClick={submitForm}/>
             </form>
+            <div class="alert alert-success alert-dismissible" style={{display:messageDisplay}}>
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Success!</strong> {message}
+            </div>
         </div>
     )
 }
