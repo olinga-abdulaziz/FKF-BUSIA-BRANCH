@@ -5,8 +5,8 @@ function Maintanance() {
         <div className='maintContainer'>
            <div className='maintBox'>
            <center>
-           <h4>System nnder Maintainance</h4>
-           <p>The System is down for maintanance , our engeneers are currently working on the system. </p>
+           <h4>System under Maintainance</h4>
+           <p>The System is down for maintanance , our engeneers are currently working on the system.</p>
            <small>We will be back soon</small>
            </center>
            </div>
