@@ -1,14 +1,27 @@
 import axios from 'axios';
 import * as React from 'react'
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import '../Pages/Css/manageF.css';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 
 function ManageFixture() {
+    const navigate = useNavigate();
+
+    
+
+    useEffect(() => {
+        FetchWeeks()
+    }, []);
+
     const [week, setweek] = useState("");
     const [displayt, setdisplayt] = useState("none");
     const [messageDisplay, setmessageDisplay] = useState("none");
+    const [weeksData, setweeksData] = useState([]);
+
+    function toWeekMain(week){
+        navigate('/week-main',{state:{week:week}});
+    }
 
     function AddWeek() {
         console.log("script started");
@@ -16,17 +29,31 @@ function ManageFixture() {
             return
         }else{
         setdisplayt("block")
+
         axios.post('https://busia-muslim-council.herokuapp.com/club/add-week',{
-            week:week
+            week:week,
         }).then((req,res)=>{
-            setdisplayt("none")
             setweek("")
+            setmessageDisplay("block")
+            setdisplayt("none")
+            FetchWeeks()
             setmessageDisplay("block")
         }).catch((err)=>{
             console.log(err);
         })
     }
     }
+
+    function FetchWeeks() {
+        axios.get('https://busia-muslim-council.herokuapp.com/club/weeks').then((res)=>{
+            let myresults=res.data
+            setweeksData(myresults)
+
+        }).catch((err)=>{
+            console.log(err);
+        })
+    }
+
 
 
 
@@ -42,7 +69,7 @@ function ManageFixture() {
                     <form>
                         <div className='form-group wkfg d-flex'>
                             <input type='text' className='form-control' required placeholder='eg. week 9' onChange={(event=>setweek(event.target.value))}/>
-                            <button type='submit' className='btn btn-outline-info' onClick={AddWeek}><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                            <button type='button' className='btn btn-outline-info' onClick={AddWeek}><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                         </div>
                     </form>
                     <div className="spinner-border text-dark spn1" style={{display:displayt}}></div>
@@ -52,30 +79,16 @@ function ManageFixture() {
                         <strong>Success!</strong> Week added successfully !
                     </div>
                 </article>
-
-                <Link to='/week-main'>
-                    <article className='weekBox btn btn-outline-info'>
-                        <i className="fa fa-calendar" aria-hidden="true"></i>
-                        <small>Week 1</small>
-                        <i className="fa fa-eye" aria-hidden="true"></i>
-                    </article>
-                </Link>
-                <article className='weekBox btn btn-outline-info'>
-                <i className="fa fa-calendar" aria-hidden="true"></i>
-                    <small>Week 2</small>
-                    <i className="fa fa-eye" aria-hidden="true"></i>
-                </article>
-                <article className='weekBox btn btn-outline-info'>
-                <i className="fa fa-calendar" aria-hidden="true"></i>
-                    <small>Week 3</small>
-                    <i className="fa fa-eye" aria-hidden="true"></i>
-                </article>
-                <article className='weekBox btn btn-outline-info'>
-                <i className="fa fa-calendar" aria-hidden="true"></i>
-                    <small>Week 4</small>
-                    <i className="fa fa-eye" aria-hidden="true"></i>
-                </article>
-                
+                {weeksData.map((week)=>{
+                    return(
+                        <article key={week.id} onClick={()=>toWeekMain(week.week)} className='weekBox btn btn-outline-info'>
+                            <i className="fa fa-calendar" aria-hidden="true"></i>
+                            <small>{week.week}</small>
+                            <i className="fa fa-eye" aria-hidden="true"></i>
+                        </article>
+                    )
+                })}
+                               
             </div>
         </div>
     )

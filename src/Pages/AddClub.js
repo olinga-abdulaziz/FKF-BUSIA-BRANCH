@@ -14,13 +14,13 @@ function AddClub() {
     const [messageDisplay, setmessageDisplay] = useState("none");
     function submitForm() {
         setbtnsubmit("please wait ...")
+
         axios.post('https://busia-muslim-council.herokuapp.com/club/add',{
             clubname:clubname,
             abriviation:abriviation,
             home:home,
             stadium:stadium,
             description:description
-
         }).then((req,res)=>{
             setmessage("Club Registerd Successfully")
             setmessageDisplay("block")

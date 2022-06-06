@@ -1,15 +1,22 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom';
+import { Link,useLocation,useNavigate } from 'react-router-dom';
 import '../Pages/Css/manageF.css';
 
 
 function WeekMain() {
+    const location = useLocation();
+    const navigate=useNavigate();
+
+    function toGamePanel(week) {
+        navigate('/game-panel',{state:{week:week}})
+    }
+
     return(
         <div className='manageContainer'>
             <div className='container manageBox'>
                 <div className='manageTopBarC'>
-                    <strong>Week 1</strong> 
-                    <Link to='/game-panel' className='btn btn-outline-info'><i class="fa fa-plus-circle" aria-hidden="true"></i>Add Game</Link>
+                    <strong>{location.state.week}</strong> 
+                    <button onClick={()=>toGamePanel(location.state.week)} className='btn btn-outline-info'><i class="fa fa-plus-circle" aria-hidden="true"></i>Add Game</button>
                 </div>
                 <br />
             
