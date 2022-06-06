@@ -18,7 +18,7 @@ import WeekMain from './Pages/WeeksMain';
 import GameFix from './Pages/GameFix';
 
 function App() {
-    const [isMaintanance, setisMaintanance] = useState(false);
+    const [isMaintanance, setisMaintanance] = useState(true);
   return (
     <div>
       {isMaintanance ? <Maintanance />:<AppBox />}
