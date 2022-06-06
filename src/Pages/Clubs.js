@@ -37,7 +37,7 @@ function Clubs() {
                     <strong className='text-muted'>Registered Clubs</strong>
                     <Link to='/add-club' className='btn btn-secondary'><i class="fa fa-plus-circle" aria-hidden="true"></i> New Club</Link>                  
                 </div>
-                <div class="containerClubT">
+                <div className="containerClubT">
                     {isLoading ? <div class="spinner-border text-dark spn1"></div> : <TableContainer />}    
                 </div>
             </div>
@@ -46,7 +46,7 @@ function Clubs() {
 
     function TableContainer() {
         return (
-            <table class="table table-hover">
+            <table className="table table-hover">
             <thead>
             <tr>
                 <th>CLUB NAME</th>

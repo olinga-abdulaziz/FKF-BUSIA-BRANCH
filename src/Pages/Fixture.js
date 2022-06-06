@@ -15,7 +15,7 @@ function Fixtures() {
                                 </div>
                             </div>
                         </div>
-        <Link to='manage-fixture' className='btn btn-info'>Manage Fixture</Link>
+        <Link to='/manage-fixture' className='btn btn-info'>Manage Fixture</Link>
     <article className='weekFixt'>           
         <div style={{paddingLeft:'10px'}}><small className='text-muted'>Week 1</small></div>
         <div id="accordion">

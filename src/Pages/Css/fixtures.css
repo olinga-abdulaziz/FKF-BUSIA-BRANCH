@@ -1,6 +1,6 @@
 .fixtContDiv{
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
 }
 .upcomingDiv{
@@ -12,6 +12,8 @@
 .fixturesDiv{
     width: 50%;
     height: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .upHeader{
     width: 100%;

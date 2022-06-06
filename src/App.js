@@ -14,6 +14,8 @@ import AddClub from './Pages/AddClub';
 import ManageFixture from './Pages/ManageFixture';
 import Maintanance from './Maintanance';
 import { useState } from 'react';
+import WeekMain from './Pages/WeeksMain';
+import GameFix from './Pages/GameFix';
 
 function App() {
     const [isMaintanance, setisMaintanance] = useState(false);
@@ -78,6 +80,8 @@ function AppBox() {
               <Route exact path='/edit-table' element={<EditTable />}/>
               <Route exact path='/add-club' element={<AddClub />}/>
               <Route exact path='/manage-fixture' element={<ManageFixture />}/>
+              <Route exact path='/week-main' element={<WeekMain />}/>
+              <Route exact path='/game-panel' element={<GameFix />}/>
           </Routes>
         </main>
         <footer className='footer'>
