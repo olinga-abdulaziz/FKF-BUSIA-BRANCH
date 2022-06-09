@@ -66,7 +66,7 @@ function WeekMain() {
                         <article className='card cardgame' key={game._id}  onClick={()=>gotoAddresult(game.hometeam,game.awayteam,game._id)}>
                             <div className='card-header cadh0'>
                                 <small className='text-muted'>Home</small>
-                                <small>{game.date} | {game.stadium}</small>
+                                <small className='text-muted'>{game.date} | {game.stadium}</small>
                                 <small className='text-muted'>Away</small>
                             </div>
 
