@@ -259,6 +259,7 @@ function Table() {
            <section>
                <ul className='tableUl'>
                    <li>
+                       <small className='text-muted' style={{color:'red'}}>This table will update soon ...</small>
                         <table class="table table-hover">
                             <thead>
                             <tr>
