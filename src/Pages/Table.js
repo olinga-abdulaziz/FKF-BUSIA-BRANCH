@@ -268,10 +268,11 @@ function Table() {
                                 <th>W</th>
                                 <th>D</th>
                                 <th>L</th>
+                                <th><b><strong>GD</strong></b></th>
+                                <th><b><strong >PTS</strong></b></th>
                                 <th>F</th>
                                 <th>GA</th>
-                                <th><b><strong>PTS</strong></b></th>
-                                <th>GD</th>
+  
                             </tr>
                             </thead>
                                 <tbody>
@@ -287,10 +288,11 @@ function Table() {
                                             <td>{item.w}</td>
                                             <td>{item.d}</td>
                                             <td>{item.l}</td>
+                                            <td><b><strong>{item.f - item.ga}</strong></b></td>
+                                            <td><b><strong style={{color:'green'}}>{item.pts}</strong></b></td>
                                             <td>{item.f}</td>
                                             <td>{item.ga}</td>
-                                            <td><b><strong>{item.pts}</strong></b></td>
-                                            <td>{item.f - item.ga}</td>
+
                                         </tr>
                                         )
                                         })}
