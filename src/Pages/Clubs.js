@@ -35,7 +35,6 @@ function Clubs() {
             <div className='CLbody'>
                 <div className='clbsTopN'>
                     <strong className='text-muted'>Registered Clubs</strong>
-                    <Link to='/add-club' className='btn btn-secondary'><i class="fa fa-plus-circle" aria-hidden="true"></i> New Club</Link>                  
                 </div>
                 <div className="containerClubT">
                     {isLoading ? <div class="spinner-border text-dark spn1"></div> : <TableContainer />}    

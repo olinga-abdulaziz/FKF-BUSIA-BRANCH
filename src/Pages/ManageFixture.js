@@ -68,7 +68,7 @@ function ManageFixture() {
                 <article className='weekBox1'>
                     <form>
                         <div className='form-group wkfg d-flex'>
-                            <input type='text' className='form-control' required placeholder='eg. week 9' onChange={(event=>setweek(event.target.value))}/>
+                            <input type='text' className='form-control' required placeholder='number of week' onChange={(event=>setweek(event.target.value))}/>
                             <button type='button' className='btn btn-outline-info' onClick={AddWeek}><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
                         </div>
                     </form>
@@ -83,7 +83,7 @@ function ManageFixture() {
                     return(
                         <article key={week.id} onClick={()=>toWeekMain(week.week)} className='weekBox btn btn-outline-info'>
                             <i className="fa fa-calendar" aria-hidden="true"></i>
-                            <small>{week.week}</small>
+                            <small>week {' '+week.week}</small>
                             <i className="fa fa-eye" aria-hidden="true"></i>
                         </article>
                     )

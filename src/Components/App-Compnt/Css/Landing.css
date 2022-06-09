@@ -66,6 +66,8 @@
 .LLBody{
   width: 100%;
   height: auto;
+  margin-top: 36px;
+  margin-left: 5px;
 }
 .btnSearch {
   background-color: white;
@@ -216,6 +218,7 @@
   .LLBody{
     width: 100%;
     height: auto;
+    margin-top: 10px;
   }
   .table {
     width: auto;

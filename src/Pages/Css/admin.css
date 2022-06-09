@@ -1,0 +1,48 @@
+.adminConatiner{
+    width: 100%;
+    height: auto;
+    padding-top: 70px;
+}
+.login-section{
+    width: 70%;
+    height: auto;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.cntHeadr{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+.cntrBody{
+    width: 100%;
+    padding: 20px 20px;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 650px) {
+    .adminConatiner{
+        width: 100%;
+        height: auto;
+        padding-top: 70px;
+    }
+    .login-section{
+        width: 96%;
+        height: auto;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        border-radius: 20px;
+    }
+
+}

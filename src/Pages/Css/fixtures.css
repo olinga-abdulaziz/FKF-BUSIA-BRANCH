@@ -31,7 +31,9 @@
     color: gray;
     padding: 10px;
 }
-
+.weekBox{
+    margin-top: 20px;
+}
 .upMatchItem{
     width: 100%;
     height: auto;
@@ -87,9 +89,11 @@
     padding: 3px 5px;
 }
 .fixturesDiv{
-    padding-left: 10px;
+    padding-left: 0px;
 }
-
+.clh11{
+    margin-top: 20px;
+}
 .weekLa{
     padding-left: 10px;
     padding-right: 10px;
@@ -127,6 +131,7 @@
         width: 100%;
     }
     .fixturesDiv{
-        width: 100%;
+        width: 90%;
     }
+
   }

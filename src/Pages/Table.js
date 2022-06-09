@@ -7,6 +7,7 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { Dots,Waves } from 'loading-animations-react';
+import  './Css/Table.css'
 
 function Table() {
     const data=[
@@ -219,7 +220,7 @@ function Table() {
     ]
 
     const [clubsData, setclubsData] = useState([]);
-    const [isLoading, setisLoading] = useState(true);
+    const [isLoading, setisLoading] = useState(false);
     useEffect(()=>{
         getClubs()
     },[])
@@ -243,7 +244,7 @@ function Table() {
                             </div>
                         </div>
                 </div>
-   
+                 
                 <div class="containerClubT">
                     {isLoading ? <div class="spinner-border text-dark spn1"></div> : <Table />}    
                 </div>
@@ -255,41 +256,54 @@ function Table() {
 
     function Table() {
         return(
-            <table class="table table-hover">
-            <thead>
-            <tr>
-                <th>POS</th>
-                <th>CLUB</th>
-                <th>P</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>F</th>
-                <th>GD</th>
-                <th>PTS</th>
-            </tr>
-            </thead>
-                <tbody>
-                {clubsData.map((item)=>{
-                        return(
-                        <tr>
-                            <td>{clubsData.indexOf(item)+1}</td>
-                            <td>{item.abriviation}</td>
-                            <td>{item.p}</td>
-                            <td>{item.w}</td>
-                            <td>{item.d}</td>
-                            <td>{item.l}</td>
-                            <td>{item.f}</td>
-                            <td>{item.gd}</td>
-                            <td>{item.pts}</td>
-                        </tr>
-                           )
-                        })}
-                </tbody>
-        </table>
+           <section>
+               <ul className='tableUl'>
+                   <li>
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>POS</th>
+                                <th>CLUB</th>
+                                <th>P</th>
+                                <th>W</th>
+                                <th>D</th>
+                                <th>L</th>
+                                <th>F</th>
+                                <th>GA</th>
+                                <th><b><strong>PTS</strong></b></th>
+                                <th>GD</th>
+                            </tr>
+                            </thead>
+                                <tbody>
+                                {
+                                
+                                clubsData.slice().sort((a, b) => b.pts - a.pts).map((item)=>{
+                                        return(
+                                        <tr>
+                                            <td>{clubsData.indexOf(item)+1}</td>
+                                            <td>{item.clubname}</td>
+                                            <td>{item.p}</td>
+                                            <td>{item.w}</td>
+                                            <td>{item.d}</td>
+                                            <td>{item.l}</td>
+                                            <td>{item.f}</td>
+                                            <td>{item.f}</td>
+                                            <td><b><strong>{item.pts}</strong></b></td>
+                                            <td>{item.gd}</td>
+                                        </tr>
+                                        )
+                                        })}
+                                </tbody>
+                        </table>
+                   </li>
+               </ul>
+        
+        
+           </section>
         )
     }
 }
+
 
 
 export default Table

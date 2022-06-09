@@ -16,6 +16,10 @@ import Maintanance from './Maintanance';
 import { useState } from 'react';
 import WeekMain from './Pages/WeeksMain';
 import GameFix from './Pages/GameFix';
+import AddResult from './Pages/AddResult';
+import Admin from './Pages/Admin';
+import Register from './Pages/Register';
+import ControlPanel from './Pages/ControlPanel';
 
 function App() {
     const [isMaintanance, setisMaintanance] = useState(true);
@@ -46,23 +50,26 @@ function AppBox() {
             <div className="collapse navbar-collapse" id="collapsibleNavbar">
               <ul className="navbar-nav">
               <li className="nav-item">
-                  <Link to='/' data-toggle="collapse" data-target="#collapsibleNavbar"  className='nav-link'>Home</Link>
+                  <Link to='/' data-toggle="collapse" data-target="#collapsibleNavbar"  className='nav-link'><i class="fas fa-home"></i> Home</Link>
               </li>
                 
                 <li className="nav-item">
-                  <Link to='/results' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'>Results</Link>
+                  <Link to='/results' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'><i class="fas fa-poll"></i> Results</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to='/table' data-toggle="collapse" data-target="#collapsibleNavbar"  className='nav-link'>Table</Link>
+                  <Link to='/table' data-toggle="collapse" data-target="#collapsibleNavbar"  className='nav-link'><i class="fas fa-table"></i> Table</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to='/players' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'>Players</Link>
+                  <Link to='/players' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'><i class="fas fa-users"></i> Players</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to='/clubs' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'>Clubs</Link>
+                  <Link to='/clubs' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'><i class="fas fa-volleyball-ball"></i> Clubs</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to='/fixtures' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'>Fixtures</Link>
+                  <Link to='/fixtures' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'><i class="fas fa-poll-h"></i> Fixtures</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to='/admin' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'><i class="fas fa-user-shield"></i> Admin</Link>
                 </li>
               </ul>
             </div>
@@ -82,6 +89,10 @@ function AppBox() {
               <Route exact path='/manage-fixture' element={<ManageFixture />}/>
               <Route exact path='/week-main' element={<WeekMain />}/>
               <Route exact path='/game-panel' element={<GameFix />}/>
+              <Route exact path='/add-result' element={<AddResult />}/>
+              <Route exact path='/admin' element={<Admin />}/>
+              <Route exact path='/new-account' element={<Register />}/>
+              <Route exact path='/control-panel' element={<ControlPanel />}/>
           </Routes>
         </main>
         <footer className='footer'>

@@ -7,6 +7,9 @@
     background-color: white;
     border-radius: 20px;
 }
+.contTT{
+    margin-top: 70px;
+}
 
 @media only screen and (max-width: 650px) {
     .clubForm {
