@@ -33,7 +33,7 @@ function getGames() {
         <div className='Lbox'>
             <br />
             <div className='LLhead'>
-                <strong>WEEK 13 RESULTS</strong>
+            <h6 style={{fontWeight:'10'}}>Results <strong>Week 13</strong></h6>
             </div>
 
             <div className='LLBody'>

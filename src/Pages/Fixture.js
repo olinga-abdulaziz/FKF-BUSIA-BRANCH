@@ -38,8 +38,8 @@ function Fixtures() {
 <div className='CLhead clh11'>
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                    <h4><h4>Fixtures</h4></h4>
-                    <p>The table below consist of Teso north fixtures per week</p>
+                <h6 style={{fontWeight:'10'}}>Teso North Sub-county Fixtures 2022/2023</h6>
+                    <p className='text-muted'>The table below consist of Teso north fixtures per week</p>
                 </div>
             </div>
 </div>

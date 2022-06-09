@@ -239,8 +239,7 @@ function Table() {
                 <div className='CLhead'>
                         <div class="jumbotron jumbotron-fluid">
                             <div class="container">
-                                <h4>TESO NORTH SUB-COUNTY LEAGE 2022/2023</h4>
-                                <p>The table-hover class enables a hover state (grey background on mouse over) on table rows:</p>
+                                <h6 style={{fontWeight:'10'}}>Teso North Sub-county Leage 2022/2023</h6>
                             </div>
                         </div>
                 </div>

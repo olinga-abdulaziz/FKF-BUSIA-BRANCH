@@ -28,8 +28,8 @@ function Clubs() {
             <div className='CLhead'>
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
-                    <h4>Teso North Clubs</h4>
-                    <p>The table below consist of Teso north Clubs</p>
+                <h6 style={{fontWeight:'10'}}>Teso North Sub-county Clubs 2022/2023</h6>
+                    <p className='text-muted'>The table below consist of Teso north Clubs</p>
                 </div>
             </div>
             </div>
