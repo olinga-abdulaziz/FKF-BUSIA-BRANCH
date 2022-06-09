@@ -1,7 +1,7 @@
 import playercss from './Css/Players.css'
 import { Link } from 'react-router-dom'
 import fkflogo from '../Images/fkflogo.png'
-
+import '../App.css';
 
 function Players() {
     const data=[
@@ -33,7 +33,16 @@ function Players() {
     return(
         <div className='Lbox'>
 
-            <div className='LLhead'>
+                <div className='maintContainer'>
+                <div className='maintBox'>
+                    <center>
+                    <h4>This page is under Maintainance</h4>
+                    <p>Our engeneers are currently working on this page.</p>
+                    <i class="fas fa-tools"></i> 
+                    </center>
+                    </div>
+                </div>
+            {/* <div className='LLhead'>
                 <strong>TESO NORTH SUB-COUNTY LEAGE PLAYERS</strong>
             </div>
             <div className='playerStats'>
@@ -170,7 +179,7 @@ function Players() {
                             })}
                         </tbody>
                     </table>
-            </div>
+            </div> */}
         </div>
     )
 }

@@ -1,11 +1,11 @@
 
   .carousel{
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     margin-top: 25px;
   }
   .carousel-item{
-    height: 90vh;
+    height: 100vh;
     width: 100%;
   }
 .landface{
@@ -115,6 +115,7 @@
 .tr {
   border-collapse: collapse;
 }
+
 .table tbody tr td {
   border: 1px solid gray;
   border-collapse: collapse;
@@ -156,6 +157,7 @@
   height: 100%;
   outline: 1px gray solid;
   border-radius: 10px;
+
 }
 .landingnews{
   width: 100%;
@@ -164,7 +166,7 @@
 }
 .newsBodyCover{
   display: flex;
-  padding: 10px;
+  margin-top: 20px;
 }
 .statsHead0{
   padding-left: 10px;
@@ -190,7 +192,7 @@
   .carousel{
     height: 50vh;
     width: 100%;
-    margin-top: 25px;
+    margin-top: 43px;
   }
   .landingnews{
     width: 100%;
@@ -289,5 +291,8 @@
   }
   .newsBodyCover{
     display: block;
+  }
+  .upMatchItem{
+    width: 100%;
   }
 }

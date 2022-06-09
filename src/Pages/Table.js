@@ -278,6 +278,7 @@ function Table() {
                                 {
                                 
                                 clubsData.slice().sort((a, b) => b.pts - a.pts).map((item)=>{
+                                    
                                         return(
                                         <tr>
                                             <td>{clubsData.indexOf(item)+1}</td>
@@ -287,9 +288,9 @@ function Table() {
                                             <td>{item.d}</td>
                                             <td>{item.l}</td>
                                             <td>{item.f}</td>
-                                            <td>{item.f}</td>
+                                            <td>{item.ga}</td>
                                             <td><b><strong>{item.pts}</strong></b></td>
-                                            <td>{item.gd}</td>
+                                            <td>{item.f - item.ga}</td>
                                         </tr>
                                         )
                                         })}

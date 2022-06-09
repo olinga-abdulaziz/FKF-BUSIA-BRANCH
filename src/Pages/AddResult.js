@@ -57,7 +57,6 @@ function AddResult() {
             d:d,
             l:l,
             f:f,
-            gd:gd,
             pts:pts,
             ga:ga
         }).then((res)=>{      
@@ -65,7 +64,7 @@ function AddResult() {
         }).catch((err)=>{
 
         })
-    },[p,w,d,f,l,ga,gd,pts,p1,w1,d1,l1,f1,ga1,gd1,pts1])
+    },[p,w,d,f,l,ga,gd,pts,p1,w1,d1,l1,f1,ga1,pts1])
 
     useEffect(()=>{
             
@@ -75,7 +74,6 @@ function AddResult() {
                 d:d1,
                 l:l1,
                 f:f1,
-                gd:gd1,
                 pts:pts1,
                 ga:ga1
             }).then((res)=>{
@@ -85,7 +83,7 @@ function AddResult() {
 
             })           
         
-    },[p1,w1,d1,l1,f1,ga1,gd1,pts1])
+    },[p1,w1,d1,l1,f1,ga1,pts1])
 
    function UpdateTable(){
     setbtnComplete("Confirming ...")
@@ -101,7 +99,6 @@ function AddResult() {
                     setf(item.f + parseInt(hometeam))
                     setga(item.ga + parseInt(awayteam))
                     setpts(item.pts + 1)
-                    setgd(item.gd + item.f - item.ga)
                 }else if (hometeam > awayteam){
                     //home team
                     sethomename(item.clubname)
@@ -112,7 +109,6 @@ function AddResult() {
                     setf(item.f + parseInt(hometeam))
                     setga(item.ga + parseInt(awayteam))
                     setpts(item.pts + 3)
-                    setgd(item.gd + (item.f-item.ga))
                 }else{    
                      //home team
                      sethomename(item.clubname)
@@ -123,7 +119,6 @@ function AddResult() {
                      setf(item.f + parseInt(hometeam))
                      setga(item.ga + parseInt(awayteam))
                      setpts(item.pts + 0)
-                     setgd(item.gd + (item.f-item.ga)) 
                 }
 
             })
@@ -139,7 +134,6 @@ function AddResult() {
                     setf1(item.f + parseInt(awayteam))
                     setga1(item.ga + parseInt(hometeam))
                     setpts1(item.pts + 1)
-                    setgd1(item.gd + (item.f-item.ga))
                     }else if (hometeam > awayteam){
                         //away team
                         setawayname(item.clubname)
@@ -150,7 +144,6 @@ function AddResult() {
                         setf1(item.f + parseInt(awayteam))
                         setga1(item.ga + parseInt(hometeam))
                         setpts1(item.pts + 0)
-                        setgd1(item.gd + (item.f-item.ga))
                     }else{
                         //away team
                         setawayname(item.clubname)
@@ -161,7 +154,7 @@ function AddResult() {
                         setf1(item.f + parseInt(awayteam))
                         setga1(item.ga + parseInt(hometeam))
                         setpts1(item.pts + 3)
-                        setgd1(item.gd + (item.f-item.ga))
+
 
                     }                                                   
             })

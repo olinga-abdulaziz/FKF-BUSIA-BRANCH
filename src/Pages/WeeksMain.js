@@ -2,15 +2,29 @@ import * as React from 'react'
 import { Link,useLocation,useNavigate } from 'react-router-dom';
 import '../Pages/Css/manageF.css';
 import axios from 'axios';
+import { authentication } from '../Files/Firebase'
 import { useState,useEffect } from 'react';
+import { onAuthStateChanged } from "firebase/auth";
 
 function WeekMain() {
     const location = useLocation();
     const navigate=useNavigate();
+    const [chechkDisp, setchechkDisp] = useState("none");
 
     useEffect(()=>{
         getGames()
+        checkIfUserIsLogedIn()
     },[])
+
+    const checkIfUserIsLogedIn=()=>{
+        onAuthStateChanged(authentication,(user)=>{
+            if(user){
+                setchechkDisp("block")
+            }else{
+                return
+            }
+        })
+    }
 
     const [games, setgames] = useState([]);
 
@@ -19,7 +33,16 @@ function WeekMain() {
     }
 
     function gotoAddresult(hometeam,awayteam,id) {
-        navigate('/add-result',{state:{hometeam:hometeam,awayteam:awayteam,id:id}})
+        
+            onAuthStateChanged(authentication,(user)=>{
+                if(user){
+                    navigate('/add-result',{state:{hometeam:hometeam,awayteam:awayteam,id:id}})
+                }else{
+                    return
+                }
+            })
+
+        
     }
 
     function getGames() {
@@ -35,7 +58,7 @@ function WeekMain() {
             <div className='container manageBox'>
                 <div className='manageTopBarC'>
                     <strong> week{' '+location.state.week}</strong> 
-                    <button onClick={()=>toGamePanel(location.state.week)} className='btn btn-outline-info'><i class="fa fa-plus-circle" aria-hidden="true"></i>Add Game</button>
+                    <button style={{display:chechkDisp}} onClick={()=>toGamePanel(location.state.week)} className='btn btn-outline-info'><i class="fa fa-plus-circle" aria-hidden="true"></i>Add Game</button>
                 </div>
                 <br />
                 {games.map((game)=>{

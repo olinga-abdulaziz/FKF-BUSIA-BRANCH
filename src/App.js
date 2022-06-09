@@ -13,16 +13,18 @@ import EditTable from './Pages/EditTable';
 import AddClub from './Pages/AddClub';
 import ManageFixture from './Pages/ManageFixture';
 import Maintanance from './Maintanance';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import WeekMain from './Pages/WeeksMain';
 import GameFix from './Pages/GameFix';
 import AddResult from './Pages/AddResult';
 import Admin from './Pages/Admin';
 import Register from './Pages/Register';
 import ControlPanel from './Pages/ControlPanel';
+import { authentication } from './Files/Firebase'
+import { signOut ,onAuthStateChanged} from "firebase/auth";
 
 function App() {
-    const [isMaintanance, setisMaintanance] = useState(true);
+    const [isMaintanance, setisMaintanance] = useState(false);
   return (
     <div>
       {isMaintanance ? <Maintanance />:<AppBox />}
@@ -32,6 +34,26 @@ function App() {
 
 
 function AppBox() {
+  const [checkDisp, setcheckDisp] = useState("none");
+
+  useEffect(()=>{
+    checkIfUserIsLogedIn()
+  },[])
+  
+  const checkIfUserIsLogedIn=()=>{
+    onAuthStateChanged(authentication,(user)=>{
+        if(user){
+          setcheckDisp("block")
+        }else{
+            return
+        }
+    })
+}
+  function logout() {
+    signOut(authentication,()=>{
+        console.log("Logged out");
+    })
+  }
   return(
     <div className="App">
         <nav className="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
@@ -71,6 +93,9 @@ function AppBox() {
                 </li>
                 <li className="nav-item">
                   <Link to='/admin' data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'><i class="fas fa-user-shield"></i> Admin</Link>
+                </li>
+                <li className="nav-item">
+                  <a to='/admin' style={{display:checkDisp}} onClick={()=>logout()} data-toggle="collapse" data-target="#collapsibleNavbar" className='nav-link'><i class="fas fa-sign-out-alt"></i>Logout</a>
                 </li>
               </ul>
             </div>

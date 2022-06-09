@@ -1,6 +1,7 @@
 import  './Css/Landing.css'
 import {Link} from 'react-router-dom'
-
+import axios from 'axios';
+import { useState,useEffect } from 'react';
 import background from '../../Images/background.jpg'
 import img1 from '../../Images/img1.jpg'
 import img2 from '../../Images/img2.jpg'
@@ -9,11 +10,27 @@ import img4 from '../../Images/img4.jpg'
 import img5 from '../../Images/img5.jpg'
 
 function Landing() {
+    
+useEffect(()=>{
+    getGames()
+},[])
 
-    return(
+const [games, setgames] = useState([]);
+
+    function getGames() {
+  
+        axios.get(`https://busia-muslim-council.herokuapp.com/club/week/1`).then((res)=>{
+            setgames(res.data)
+        }).catch((err)=>{
+            console.log(err);
+        })
+    }
+return(
         <div>
             <div className='landingBox'>
-
+                            <br />
+                            <br />
+                            
                         <div id="demo" class="carousel slide" data-ride="carousel">
 
                             <ul class="carousel-indicators">
@@ -26,12 +43,24 @@ function Landing() {
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
                                     <img width='100%' height='100%' src={img1} alt="Los Angeles" />
+                                    <div class="carousel-caption">
+                                            <h3>Malaba Pool FC</h3>
+                                            <p>We Are are the champion of football adventure</p>
+                                     </div>
                                 </div>
                                 <div className="carousel-item">
                                     <img width='100%' height='100%' src={img4} alt="Chicago" />
+                                    <div class="carousel-caption">
+                                            <h3>Kabkara FC</h3>
+                                            <p>Football is our Future</p>
+                                     </div>
                                 </div>
                                 <div className="carousel-item">
                                     <img width='100%' height='100%' src={img3} alt="New York" />
+                                    <div class="carousel-caption">
+                                            <h3>TN Legengds FC</h3>
+                                            <p>We Are are the Legends of football </p>
+                                     </div>
                                 </div>
                             </div>
 
@@ -58,211 +87,33 @@ function Landing() {
                         <small>Week 13</small>
                     </div>
                     <div className='upbody'>
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sat. 12/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Sokopaka Fc</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Amoni pri.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Kabkara Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sat. 12/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Kakurkit Bullets</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Kakurkit pri.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Aboloi Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sun. 13/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Homeboys Fc</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Malaba Stadium.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Koruruma Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sun. 13/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Korisai Fc</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Korisai pri.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Kabkara Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sun. 13/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Pool Fc</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Malaba Stadium.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Okuleu Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sun. 13/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Adanya Fc</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Adanya Pri.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Akobwait Stars Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sun. 13/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Black Stars Fc</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Kamolo Pri.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Kocholia Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-                        <article className='upMatchItem'>
-                            <header>
-                                <strong>HOME</strong>
-                                <small>Sun. 13/May 1:10am </small>
-                                <strong>Away</strong>
-                            </header>
-                            <hr/>
-                            <footer>
-                                <div className='footfDiv1'>
-                                    <small>Kangelemge Fc</small>
-                                </div>
-                                <div className='footfDiv2'>
-                                   <center><strong>Vs</strong></center>
-                                   <div className='timeVenue'>
-                                        <center>
-                                        <small>Okuleu pri.</small>
-                                        </center>
-                                   </div>
-                                </div>
-                                <div className='footfDiv3'>
-                                    <small>Akolong Fc</small>
-                                </div>
-                            </footer>
-                        </article>
-
-
-                        
+                        {games.map((game)=>{
+                                <article className='upMatchItem'>
+                                <header>
+                                    <strong>HOME</strong>
+                                    <small>Sat. 12/May 1:10am </small>
+                                    <strong>Away</strong>
+                                </header>
+                                <hr/>
+                                <footer>
+                                    <div className='footfDiv1'>
+                                        <small>Sokopaka Fc</small>
+                                    </div>
+                                    <div className='footfDiv2'>
+                                        <center><strong>Vs</strong></center>
+                                        <div className='timeVenue'>
+                                            <center>
+                                            <small>Amoni pri.</small>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div className='footfDiv3'>
+                                        <small>Kabkara Fc</small>
+                                    </div>
+                                </footer>
+                                </article>                                                              
+                        })}
+             
                     </div>
                 </div>
 
