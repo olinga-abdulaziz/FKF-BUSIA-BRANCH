@@ -70,6 +70,17 @@ function getGames() {
             </div>
         </div>
     )
+
+    
+    // function LoadingBox() {
+    //     return(
+    //         <div className='loading' style={{display:loadingDisplay}}>
+    //             <center>
+    //             <div class="lds-facebook"><div></div><div></div><div></div></div>
+    //             </center>    
+    //         </div>
+    //     )
+    // }
 }
 
 export default Results

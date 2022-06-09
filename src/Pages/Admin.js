@@ -15,17 +15,25 @@ function Admin() {
     const [Password, setPassword] = useState("");
     const [isValid, setisValid] = useState("");
     const [btnText, setbtnText] = useState("Login");
+
+    const [isLoading, setisLoading] = useState(true);
+    const [loadingDisplay, setloadingDisplay] = useState("block");
    
     const checkIfUserIsLogedIn=()=>{
         onAuthStateChanged(authentication,(user)=>{
             if(user){
                 window.location.href='/control-panel'
+                setisLoading(false)
+                setloadingDisplay("none")
                 return
             }else{
+                setisLoading(false)
+                setloadingDisplay("none")
                 return
             }
         })
     }
+
 
     function Login(){
         setbtnText("Please wait ...")
@@ -49,17 +57,24 @@ function Admin() {
 
 
     return(
-        <div className='container adminConatiner'>
+        <div>
+            {isLoading ? <LoadingBox /> :<Admin />}
+        </div>
+    )
+
+    function Admin() {
+        return(
+            <div className='container adminConatiner'>
             <form className='login-section'>
                 <h4>Authorized Access <i class="far fa-lock-alt"></i></h4>
                 <label for="inputName">Email</label>
-                <input type="email" className={`form-control ${isValid}`}onChange={(element)=>setEmail(element.target.value)} name="inputName" id="inputName" />
+                <input value={Email} type="email" className={`form-control ${isValid}`}onChange={(element)=>setEmail(element.target.value)} name="inputName" id="inputName" />
                 <div className="invalid-feedback">
                     Validation message
                 </div>
                 <br />
                 <label for="inputName">Password</label>
-                <input type="password" className={`form-control ${isValid}`} onChange={(element)=>setPassword(element.target.value)} name="inputName" id="inputName" />
+                <input value={Password} type="password" className={`form-control ${isValid}`} onChange={(element)=>setPassword(element.target.value)} name="inputName" id="inputName" />
                 <div className="invalid-feedback">
                     Validation message
                 </div>
@@ -73,7 +88,17 @@ function Admin() {
                 <center>Are you a new admin ? <Link to='/new-account'>Create account</Link></center> 
             </form>
         </div>
-    )
+        )
+    }
+    function LoadingBox() {
+        return(
+            <div className='loading' style={{display:loadingDisplay}}>
+                <center>
+                <div class="lds-facebook"><div></div><div></div><div></div></div>
+                </center>    
+            </div>
+        )
+    }
 }
 
 

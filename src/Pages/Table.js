@@ -220,7 +220,8 @@ function Table() {
     ]
 
     const [clubsData, setclubsData] = useState([]);
-    const [isLoading, setisLoading] = useState(false);
+    const [isLoading, setisLoading] = useState(true);
+    const [loadingDisplay, setloadingDisplay] = useState("block");
     useEffect(()=>{
         getClubs()
     },[])
@@ -230,79 +231,92 @@ function Table() {
             const clubsArray=response.data
             setclubsData(clubsArray)
             setisLoading(false)
+            setloadingDisplay("none")
         })
     }
     return(
         <div className='Lbox'>
-            <div className='LLBody'>
-                <br />
-                <div className='CLhead'>
-                        <div class="jumbotron jumbotron-fluid">
-                            <div class="container">
-                                <h6 style={{fontWeight:'10'}}>Teso North Sub-county Leage 2022/2023</h6>
-                            </div>
-                        </div>
-                </div>
-                 
-                <div class="containerClubT">
-                    {isLoading ? <div class="spinner-border text-dark spn1"></div> : <Table />}    
-                </div>
-                
-                <br />
-            </div>
+            {isLoading ? <LoadingBox />: <Table /> }
         </div>
     )
 
+    function LoadingBox() {
+        return(
+            <div className='loading' style={{display:loadingDisplay}}>
+                <center>
+                <div class="lds-facebook"><div></div><div></div><div></div></div>
+                </center>    
+            </div>
+        )
+    }
+
+
+
     function Table() {
         return(
-           <section>
-               <ul className='tableUl'>
-                   <li>
-                       <small className='text-muted' style={{color:'red'}}>This table will update soon ...</small>
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>POS</th>
-                                <th>CLUB</th>
-                                <th>P</th>
-                                <th>W</th>
-                                <th>D</th>
-                                <th>L</th>
-                                <th><b><strong>GD</strong></b></th>
-                                <th><b><strong >PTS</strong></b></th>
-                                <th>F</th>
-                                <th>GA</th>
-  
-                            </tr>
-                            </thead>
-                                <tbody>
-                                {
-                                
-                                clubsData.slice().sort((a, b) => b.pts - a.pts).map((item)=>{
-                                    
-                                        return(
-                                        <tr>
-                                            <td>{clubsData.indexOf(item)+1}</td>
-                                            <td>{item.clubname}</td>
-                                            <td>{item.p}</td>
-                                            <td>{item.w}</td>
-                                            <td>{item.d}</td>
-                                            <td>{item.l}</td>
-                                            <td><b><strong>{item.f - item.ga}</strong></b></td>
-                                            <td><b><strong style={{color:'green'}}>{item.pts}</strong></b></td>
-                                            <td>{item.f}</td>
-                                            <td>{item.ga}</td>
+            <div className='LLBody'>
+            <br />
+            <div className='CLhead'>
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                            <h6 style={{fontWeight:'10'}}>Teso North Sub-county Leage 2022/2023</h6>
+                        </div>
+                    </div>
+            </div>
+             
+            <div class="containerClubT">
+            <section>
+           <ul className='tableUl'>
+               <li>
+                   <small className='text-muted' style={{color:'red'}}>This table will update soon ...</small>
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>POS</th>
+                            <th>CLUB</th>
+                            <th>P</th>
+                            <th>W</th>
+                            <th>D</th>
+                            <th>L</th>
+                            <th><b><strong>GD</strong></b></th>
+                            <th><b><strong >PTS</strong></b></th>
+                            <th>F</th>
+                            <th>GA</th>
 
-                                        </tr>
-                                        )
-                                        })}
-                                </tbody>
-                        </table>
-                   </li>
-               </ul>
-        
-        
-           </section>
+                        </tr>
+                        </thead>
+                            <tbody>
+                            {
+                            
+                            clubsData.slice().sort((a, b) => b.pts - a.pts).map((item)=>{
+                                
+                                    return(
+                                    <tr>
+                                        <td>{clubsData.indexOf(item)+1}</td>
+                                        <td>{item.clubname}</td>
+                                        <td>{item.p}</td>
+                                        <td>{item.w}</td>
+                                        <td>{item.d}</td>
+                                        <td>{item.l}</td>
+                                        <td><b><strong>{item.f - item.ga}</strong></b></td>
+                                        <td><b><strong style={{color:'green'}}>{item.pts}</strong></b></td>
+                                        <td>{item.f}</td>
+                                        <td>{item.ga}</td>
+
+                                    </tr>
+                                    )
+                                    })}
+                            </tbody>
+                    </table>
+               </li>
+           </ul>
+    
+    
+       </section>
+            </div>
+            
+            <br />
+        </div>
         )
     }
 }

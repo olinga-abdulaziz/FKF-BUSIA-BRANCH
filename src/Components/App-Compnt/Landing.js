@@ -42,21 +42,21 @@ return(
 
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
-                                    <img width='100%' height='100%' src={img1} alt="Los Angeles" />
+                                    <img className='carouImg' width='100%' height='100%' src={img1} alt="Los Angeles" />
                                     <div class="carousel-caption">
                                             <h3>Malaba Pool FC</h3>
                                             <p>We Are are the champion of football adventure</p>
                                      </div>
                                 </div>
                                 <div className="carousel-item">
-                                    <img width='100%' height='100%' src={img4} alt="Chicago" />
+                                    <img className='carouImg' width='100%' height='100%' src={img4} alt="Chicago" />
                                     <div class="carousel-caption">
                                             <h3>Kabkara FC</h3>
                                             <p>Football is our Future</p>
                                      </div>
                                 </div>
                                 <div className="carousel-item">
-                                    <img width='100%' height='100%' src={img3} alt="New York" />
+                                    <img className='carouImg' width='100%' height='100%' src={img3} alt="New York" />
                                     <div class="carousel-caption">
                                             <h3>TN Legengds FC</h3>
                                             <p>We Are are the Legends of football </p>
