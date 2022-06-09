@@ -22,13 +22,14 @@ import Register from './Pages/Register';
 import ControlPanel from './Pages/ControlPanel';
 
 function App() {
-    const [isMaintanance, setisMaintanance] = useState(false);
+    const [isMaintanance, setisMaintanance] = useState(true);
   return (
     <div>
       {isMaintanance ? <Maintanance />:<AppBox />}
     </div>
   );
 }
+
 
 function AppBox() {
   return(
