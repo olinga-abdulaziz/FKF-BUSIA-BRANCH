@@ -18,7 +18,7 @@ useEffect(()=>{
 const [games, setgames] = useState([]);
 
     function getGames() {
-  
+        console.log('started..');
         axios.get(`https://busia-muslim-council.herokuapp.com/club/week/1`).then((res)=>{
             setgames(res.data)
         }).catch((err)=>{
@@ -80,7 +80,7 @@ return(
 
                     {/* // upcoming fixtures */}
 
-
+                   
                     <div className='upcomingDiv0'>
                     <div className='upHeader'>
                         <strong>Upcomming Matches</strong>
@@ -88,30 +88,32 @@ return(
                     </div>
                     <div className='upbody'>
                         {games.map((game)=>{
+                            return(
                                 <article className='upMatchItem'>
                                 <header>
                                     <strong>HOME</strong>
-                                    <small>Sat. 12/May 1:10am </small>
+                                    <small>Sat. {game.date} {game.time} </small>
                                     <strong>Away</strong>
                                 </header>
                                 <hr/>
                                 <footer>
                                     <div className='footfDiv1'>
-                                        <small>Sokopaka Fc</small>
+                                        <small>{game.hometeam}</small>
                                     </div>
                                     <div className='footfDiv2'>
                                         <center><strong>Vs</strong></center>
                                         <div className='timeVenue'>
                                             <center>
-                                            <small>Amoni pri.</small>
+                                            <small>{game.stadium}</small>
                                             </center>
                                         </div>
                                     </div>
                                     <div className='footfDiv3'>
-                                        <small>Kabkara Fc</small>
+                                        <small>{game.awayteam}</small>
                                     </div>
                                 </footer>
-                                </article>                                                              
+                                </article>
+                            )                                                              
                         })}
              
                     </div>
