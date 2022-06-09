@@ -1,4 +1,5 @@
 import './Css/Clubs.css'
+import  '../Components/App-Compnt/Css/Landing.css'
 import fkflogo from '../Images/fkflogo.png'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
@@ -45,9 +46,12 @@ function Clubs() {
 
     function TableContainer() {
         return (
+            <ul className='tableUl'>
+            <li>
             <table className="table table-hover">
             <thead>
             <tr>
+                <th>NO</th>
                 <th>CLUB NAME</th>
                 <th>ABRV</th>
                 <th>LOCATION</th>
@@ -59,6 +63,7 @@ function Clubs() {
                 {clubsData.map((item)=>{
                     return(
                     <tr>
+                        <td>{clubsData.indexOf(item)+1}</td>
                         <td>{item.clubname}</td>
                         <td>{item.abriviation}</td>
                         <td>{item.home}</td>
@@ -70,6 +75,8 @@ function Clubs() {
                      
                 </tbody>
     </table> 
+    </li>
+    </ul>
         )
     }
 }
