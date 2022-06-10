@@ -22,6 +22,10 @@ import Register from './Pages/Register';
 import ControlPanel from './Pages/ControlPanel';
 import { authentication } from './Files/Firebase'
 import { signOut ,onAuthStateChanged} from "firebase/auth";
+import ReactGA from 'react-ga';
+const TRACKING_ID = "G-JKZWN1Y7R8"; 
+ReactGA.initialize(TRACKING_ID);
+
 
 function App() {
     const [isMaintanance, setisMaintanance] = useState(false);
@@ -38,6 +42,7 @@ function AppBox() {
 
   useEffect(()=>{
     checkIfUserIsLogedIn()
+    ReactGA.pageview(window.location.pathname + window.location.search);
   },[])
   
   const checkIfUserIsLogedIn=()=>{
