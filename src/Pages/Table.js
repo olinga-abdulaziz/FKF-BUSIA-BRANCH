@@ -281,7 +281,7 @@ function Table() {
             <section>
            <ul className='tableUl'>
                <li>
-               <small className='text-muted' style={{color:'red',marginLeft:'10px'}}>Update in progress... <i class="fa fa-spinner" aria-hidden="true"></i></small>
+               {/* <small className='text-muted' style={{color:'red',marginLeft:'10px'}}>Update in progress... <i class="fa fa-spinner" aria-hidden="true"></i></small> */}
 
                     <table class="table table-hover">
 
