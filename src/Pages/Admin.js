@@ -6,16 +6,17 @@ import { useState,useEffect } from 'react'
 import { signInWithEmailAndPassword,onAuthStateChanged } from "firebase/auth";
 
 function Admin() {
+    
 
     useEffect(()=>{
         checkIfUserIsLogedIn()
     },[])
 
+    
     const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
     const [isValid, setisValid] = useState("");
     const [btnText, setbtnText] = useState("Login");
-
     const [isLoading, setisLoading] = useState(true);
     const [loadingDisplay, setloadingDisplay] = useState("block");
    
@@ -54,29 +55,20 @@ function Admin() {
     }
 
  
-
-
     return(
-        <div>
-            {isLoading ? <LoadingBox /> :<Admin />}
-        </div>
-    )
-
-    function Admin() {
-        return(
-            <div className='container adminConatiner'>
+        <div className='container adminConatiner'>
             <form className='login-section'>
                 <h4>Authorized Access <i class="far fa-lock-alt"></i></h4>
                 <label for="inputName">Email</label>
-                <input value={Email} type="email" className={`form-control ${isValid}`}onChange={(element)=>setEmail(element.target.value)} name="inputName" id="inputName" />
+                <input value={Email} onChange={((text)=>setEmail(text.target.value))} type="email" className={`form-control ${isValid}`}  name="Email" id="inputName" />
                 <div className="invalid-feedback">
-                    Validation message
+                    Validation failed {Email}
                 </div>
                 <br />
                 <label for="inputName">Password</label>
-                <input value={Password} type="password" className={`form-control ${isValid}`} onChange={(element)=>setPassword(element.target.value)} name="inputName" id="inputName" />
+                <input  type="password" className={`form-control ${isValid}`} onChange={((text)=>setPassword(text.target.value))}  name="Password" id="Password" />
                 <div className="invalid-feedback">
-                    Validation message
+                    Validation failed
                 </div>
                 <br />
                 <input type='button'  onClick={()=>Login()} value={btnText} className='btn btn-secondary form-control' />
@@ -88,8 +80,8 @@ function Admin() {
                 <center>Are you a new admin ? <Link to='/new-account'>Create account</Link></center> 
             </form>
         </div>
-        )
-    }
+    )
+
     function LoadingBox() {
         return(
             <div className='loading' style={{display:loadingDisplay}}>

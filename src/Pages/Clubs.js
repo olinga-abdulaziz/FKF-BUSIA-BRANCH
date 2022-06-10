@@ -6,12 +6,14 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { Dots,Waves } from 'loading-animations-react';
-
+import  './Css/Table.css'
 
 function Clubs() {
 
     const [clubsData, setclubsData] = useState([]);
     const [isLoading, setisLoading] = useState(true);
+    const [loadingDisplay, setloadingDisplay] = useState("block");
+
     useEffect(()=>{
         getClubs()
     },[])
@@ -38,11 +40,21 @@ function Clubs() {
                     <strong className='text-muted'>Registered Clubs</strong>
                 </div>
                 <div className="containerClubT">
-                    {isLoading ? <div class="spinner-border text-dark spn1"></div> : <TableContainer />}    
+                    {isLoading ? <LoadingBox /> : <TableContainer />}    
                 </div>
             </div>
         </div>
     )
+
+    function LoadingBox() {
+        return(
+            <div className='loading' style={{display:loadingDisplay}}>
+                <center>
+                <div class="lds-facebook"><div></div><div></div><div></div></div>
+                </center>    
+            </div>
+        )
+    }
 
     function TableContainer() {
         return (

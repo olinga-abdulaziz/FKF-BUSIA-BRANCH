@@ -71,14 +71,15 @@ function WeekMain() {
                             </div>
 
                         <div className='cardgMain'>
-                             <span class="badge badge-secondary"><font>{game.hometeam}</font></span>
-                        
-                            <span class="badge badge-success">{game.htr}</span>
-                            <small>Vs</small>
-                            
-                            <span class="badge badge-secondary"><font>{game.awayteam}</font></span>
-
-                            <span class="badge badge-success">{game.atr}</span>
+                             <div style={{width:'40%',display:'flex',justifyContent:'space-between'}}>
+                                <span class="badge badge-secondary"><font>{game.hometeam}</font></span>
+                                <span class="badge badge-success">{game.htr}</span>
+                             </div>
+                                <small>Vs</small>
+                            <div style={{width:'40%',display:'flex',justifyContent:'space-between'}}>
+                                <span class="badge badge-secondary"><font>{game.awayteam}</font></span>
+                                <span class="badge badge-success">{game.atr}</span>
+                            </div>
                             
                         </div>
                         </article>
