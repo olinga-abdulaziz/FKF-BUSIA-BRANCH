@@ -276,6 +276,8 @@ function Table() {
                         </div>
                     </div>
             </div>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5569911640505982"
+            crossorigin="anonymous"></script>
              
             <div class="containerClubT">
             <section>
