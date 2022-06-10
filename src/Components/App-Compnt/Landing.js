@@ -19,7 +19,7 @@ const [games, setgames] = useState([]);
 
     function getGames() {
         console.log('started..');
-        axios.get(`https://busia-muslim-council.herokuapp.com/club/week/1`).then((res)=>{
+        axios.get(`https://busia-muslim-council.herokuapp.com/club/week/15`).then((res)=>{
             setgames(res.data)
         }).catch((err)=>{
             console.log(err);
@@ -84,7 +84,7 @@ return(
                     <div className='upcomingDiv0'>
                     <div className='upHeader'>
                         <strong>Upcomming Matches</strong>
-                        <small>Week 13</small>
+                        <small>Week 15</small>
                     </div>
                     <div className='upbody'>
                         {games.map((game)=>{

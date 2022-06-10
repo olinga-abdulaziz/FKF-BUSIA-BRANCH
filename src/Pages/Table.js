@@ -222,6 +222,8 @@ function Table() {
     const [clubsData, setclubsData] = useState([]);
     const [isLoading, setisLoading] = useState(true);
     const [loadingDisplay, setloadingDisplay] = useState("block");
+
+    const [myIndexArray, setmyIndexArray] = useState([]);
     useEffect(()=>{
         getClubs()
     },[])
@@ -234,6 +236,8 @@ function Table() {
             setloadingDisplay("none")
         })
     }
+        
+  
     return(
         <div className='Lbox'>
             {isLoading ? <LoadingBox />: <Table /> }
@@ -249,6 +253,9 @@ function Table() {
             </div>
         )
     }
+
+ 
+        
 
 
 
@@ -268,8 +275,10 @@ function Table() {
             <section>
            <ul className='tableUl'>
                <li>
-                   <small className='text-muted' style={{color:'red'}}>Updating in progress...</small>
+               <small className='text-muted' style={{color:'red',marginLeft:'10px'}}>Update in progress... <i class="fa fa-spinner" aria-hidden="true"></i></small>
+
                     <table class="table table-hover">
+
                         <thead>
                         <tr>
                             <th>POS</th>
@@ -286,26 +295,29 @@ function Table() {
                         </tr>
                         </thead>
                             <tbody>
-                            {
-                            
-                            clubsData.slice().sort((a, b) => b.pts - a.pts).map((item)=>{
-                                
+                               
+                                {clubsData.slice().sort((a, b) => b.gd - a.gd).map((item)=>{
+                                        
                                     return(
-                                    <tr>
-                                        <td>{clubsData.indexOf(item)+1}</td>
-                                        <td>{item.clubname}</td>
-                                        <td>{item.p}</td>
-                                        <td>{item.w}</td>
-                                        <td>{item.d}</td>
-                                        <td>{item.l}</td>
-                                        <td><b><strong>{item.f - item.ga}</strong></b></td>
-                                        <td><b><strong style={{color:'green'}}>{item.pts}</strong></b></td>
-                                        <td>{item.f}</td>
-                                        <td>{item.ga}</td>
+                                        <tr>
+                                            <td></td>
+                                            <td>{item.clubname}</td>
+                                            <td>{item.p}</td>
+                                            <td>{item.w}</td>
+                                            <td>{item.d}</td>
+                                            <td>{item.l}</td>
+                                            <td><b><strong>{item.f - item.ga}</strong></b></td>
+                                            <td><b><strong style={{color:'green'}}>{item.pts}</strong></b></td>
+                                            <td>{item.f}</td>
+                                            <td>{item.ga}</td>
+                                    
+                                        </tr>
+                                        )
+                                    
+                                })
+                                
+                                }
 
-                                    </tr>
-                                    )
-                                    })}
                             </tbody>
                     </table>
                </li>
@@ -320,6 +332,7 @@ function Table() {
         )
     }
 }
+
 
 
 
