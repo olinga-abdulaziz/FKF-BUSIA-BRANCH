@@ -23,7 +23,7 @@ const [games, setgames] = useState([]);
 
 function getGames() {
   
-    axios.get(`https://busia-muslim-council.herokuapp.com/club/week/1`).then((res)=>{
+    axios.get(`https://busia-muslim-council.herokuapp.com/club/week/15`).then((res)=>{
         setgames(res.data)
     }).catch((err)=>{
         console.log(err);
@@ -33,7 +33,7 @@ function getGames() {
         <div className='Lbox'>
             <br />
             <div className='LLhead'>
-            <h6 style={{fontWeight:'10'}}>Results <strong>Week 13</strong></h6>
+            <h6 style={{fontWeight:'10'}}>Results <strong>Week 15</strong></h6>
             </div>
 
             <div className='LLBody'>
