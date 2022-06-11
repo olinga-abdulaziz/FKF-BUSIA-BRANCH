@@ -23,7 +23,7 @@ import ControlPanel from './Pages/ControlPanel';
 import { authentication } from './Files/Firebase'
 import { signOut ,onAuthStateChanged} from "firebase/auth";
 import ReactGA from 'react-ga';
-const TRACKING_ID = "G-JKZWN1Y7R8"; 
+const TRACKING_ID = "UA-231691293-2"; 
 ReactGA.initialize(TRACKING_ID);
 
 
