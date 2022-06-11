@@ -34,7 +34,13 @@ function getGames() {
             <br />
             <div className='LLhead'>
             <h6 style={{fontWeight:'10'}}>Results <strong>Week 15</strong></h6>
+          
             </div>
+            <div style={{width:'100%'}}>
+            <a href='https://kol.jumia.com/api/click/link/d884787d-e6bd-4979-8f7e-7cd224451b46/11ca45e2-40bf-48c8-adc7-4926691f1c05'>                            <img src='https://kol.jumia.com/banners/4KGCXsgo5buixQ3gB46p6IlKm04OEtVGtzHr3pVc.jpeg' width='100%' height='100%' /></a>
+
+            </div>
+   
 
             <div className='LLBody'>
                 <div className='manageTopBarC'>

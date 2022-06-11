@@ -270,14 +270,15 @@ function Table() {
             <div className='LLBody'>
             <br />
             <div className='CLhead'>
+                       
                     <div class="jumbotron jumbotron-fluid">
+                   
                         <div class="container">
                             <h6 style={{fontWeight:'10'}}>Teso North Sub-county Leage 2022/2023</h6>
                         </div>
                     </div>
             </div>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5569911640505982"
-            crossorigin="anonymous"></script>
+            
              
             <div class="containerClubT">
             <section>
@@ -331,7 +332,10 @@ function Table() {
                </li>
            </ul>
     
-    
+           <div style={{width:'100%'}}>
+            <a href='https://kol.jumia.com/api/click/link/d884787d-e6bd-4979-8f7e-7cd224451b46/11ca45e2-40bf-48c8-adc7-4926691f1c05'>                            <img src='https://kol.jumia.com/banners/4KGCXsgo5buixQ3gB46p6IlKm04OEtVGtzHr3pVc.jpeg' width='100%' height='100%' /></a>
+
+            </div>
        </section>
             </div>
             

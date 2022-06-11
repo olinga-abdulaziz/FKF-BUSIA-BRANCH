@@ -30,9 +30,7 @@ return(
             <div className='landingBox'>
                             <br />
                             <br />
-                            <div style={{width:'100%'}}>
-                            <a href="https://kol.jumia.com/api/click/link/d884787d-e6bd-4979-8f7e-7cd224451b46/026234e5-b229-4881-be28-679a642f9da4"><img width={{width:'100%'}} src="https://kol.jumia.com/banners/AwI8xxxgXCOgvEKLeIYFaEd5UYr1T9uxiLnyWip4.png" alt="Computing Category"/></a>
-                            </div>
+                            
                         <div id="demo" class="carousel slide" data-ride="carousel">
 
                             <ul class="carousel-indicators">
@@ -117,7 +115,9 @@ return(
                                 </article>
                             )                                                              
                         })}
-             
+                        <div style={{width:'100%'}}>
+                            <img src='https://kol.jumia.com/banners/4KGCXsgo5buixQ3gB46p6IlKm04OEtVGtzHr3pVc.jpeg' width='100%' height='100%' />
+                        </div>
                     </div>
                 </div>
 

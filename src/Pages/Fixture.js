@@ -56,6 +56,14 @@ function Fixtures() {
                         </article>
                     )
         })}
+
+<div style={{width:'100%'}}>
+<a href="https://kol.jumia.com/api/click/link/d884787d-e6bd-4979-8f7e-7cd224451b46/761e4541-4edc-420b-acca-918c3cf8953f"><img src=' https://kol.jumia.com/banners/kLe37JsJqe1EVHVmzQeQPHhCFp1M0Av8UbxVYi1G.jpg' width='100%' height='100%' /></a>
+                
+            </div>
+           
+            <br />
+            <br />
               
 </div>
 </section>
