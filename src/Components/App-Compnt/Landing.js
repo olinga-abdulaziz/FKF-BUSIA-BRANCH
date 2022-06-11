@@ -92,7 +92,7 @@ return(
                                 <article className='upMatchItem'>
                                 <header>
                                     <strong>HOME</strong>
-                                    <small>Sat. {game.date} {game.time} </small>
+                                    <small>Sun. {game.date} {game.time} </small>
                                     <strong>Away</strong>
                                 </header>
                                 <hr/>
