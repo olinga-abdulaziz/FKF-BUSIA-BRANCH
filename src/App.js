@@ -143,9 +143,9 @@ function AppBox() {
             <p>Teso north  football club. we are the is our slogan,Teso north legends football club. we are the champions.forwad always and backward never is our slogan</p>
             </small>
             <strong>CONTACT</strong> <br />
-            <small>Phone 1: +2547226890871</small> <br />
-            <small>Phone 2: +2547226890871</small> <br />
-            <small>email: tesonorthfkf@gmail.com</small> <br />
+            <small>Phone 1: +254769210601</small> <br />
+            <small>Phone 2: +254769210601</small> <br />
+            <small>email: abdulazizolinga17@gmail.com</small> <br />
             </section>
             <section className='botFesc3'>
             <strong>FOLLOW</strong> <br />
@@ -159,9 +159,9 @@ function AppBox() {
         <div className='footer'>
         <section className='botFesc2'>
           <strong>DEVELOPER</strong> <br />
-          <small>This web application was developed by : <br /> DATA-LINK L.T.D</small>
+          <small>This web application was developed by : <br /> ABDULAZIZ OLINGA SAIDI</small>
           <br />
-          <small>read more about DATA-LINK L.T.D at <a href='#' >www.datalinkltd.org</a> or send us an email at datalinkmalba1000@gmail.com</small>
+          <small>read more about abdulaziz olinga saidi at <a href='#' >www.abdulazizolinga.netlify.app</a> or send us an email at datalinkmalba1000@gmail.com</small>
         </section>
         </div>
         <div className='copywriteDiv'>
