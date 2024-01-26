@@ -237,6 +237,7 @@ function Table() {
     const [myIndexArray, setmyIndexArray] = useState([]);
     useEffect(()=>{
         getClubs()
+        setclubsData(data)
     },[])
 
     function getClubs() {
